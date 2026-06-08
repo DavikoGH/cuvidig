@@ -1,0 +1,8 @@
+{
+  "name": "cuvidig2",
+  "description": "Directorio de Currículums Vitae Profesionales",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
