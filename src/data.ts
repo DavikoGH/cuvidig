@@ -13,7 +13,6 @@ export const paises: Pais[] = [
 
 export const categorias: Categoria[] = [
   { id: "1", nombre: "Salud" },
-  { id: "2", nombre: "Ingeniería" },
   { id: "3", nombre: "Electricidad" },
   { id: "4", nombre: "Administración" },
   { id: "5", nombre: "Construcción" },
@@ -27,6 +26,9 @@ export const categorias: Categoria[] = [
   { id: "13", nombre: "Derecho" },
   { id: "14", nombre: "Psicología" },
   { id: "15", nombre: "Marketing y Ventas" },
+  { id: "16", nombre: "Trabajo Social" },
+  { id: "17", nombre: "Industrial" },
+  { id: "18", nombre: "Comercial" },
 ];
 
 export const ciudades: Ciudad[] = [
@@ -48,6 +50,92 @@ export const roles: Rol[] = [
 ];
 
 export const personas: Persona[] = [
+  {
+    "id": "carlos-boris-ger-saenz",
+    "nombre": "Carlos Boris",
+    "apellido": "Ger Saenz",
+    "foto": "/carlosborisgersaenz_rostro.jpg",
+    "portada": "/carlosborisgersaenz_portada_web.jpg",
+    "profesion": "Contador Público",
+    "paisId": "1",
+    "areaId": "11",
+    "ciudadId": "3",
+    "telefono": "+591 77498875",
+    "email": "chaliger7@gmail.com",
+    "descripcion": "Contador Público e Ingeniero Comercial con sólida experiencia en gerencia de ventas, logística y administración. Experto en gestión de almacenes, adquisiciones y logística de transporte.",
+    "experiencia": [
+      {
+        "cargo": "FREE LANCE",
+        "empresa": "Grupo Avícola Navallo A.L.G. Bolivia",
+        "duracion": "Ago 2017 - Oct 2024"
+      },
+      {
+        "cargo": "Gerente de Ventas-Administrativo",
+        "empresa": "Grupo Avícola Navallo A.L.G.",
+        "duracion": "May 2014 - May 2017"
+      },
+      {
+        "cargo": "Gerente de Logística y Distribución",
+        "empresa": "Grupo Avícola Navallo A.L.G.",
+        "duracion": "May 2010 - May 2015"
+      },
+      {
+        "cargo": "Encargado Adquisiciones y Almacenes",
+        "empresa": "Grupo Avícola Navallo A.L.G.",
+        "duracion": "Ene 2008 - Dic 2010"
+      }
+    ],
+    "formacion": [
+      {
+        "titulo": "Logística y Operaciones Supply Chain Management",
+        "institucion": "ADECI",
+        "ano": "Feb 2021 - Ago 2021"
+      },
+      {
+        "titulo": "Formación de Consultores para Adquisiciones",
+        "institucion": "ADECI",
+        "ano": "Feb 2021 - Ago 2021"
+      },
+      {
+        "titulo": "Gestión de Almacenes & Logística de transporte",
+        "institucion": "UNICEN",
+        "ano": "Jun 2017 - Dic 2017"
+      },
+      {
+        "titulo": "Ingeniería Comercial",
+        "institucion": "Universidad Domingo Savio",
+        "ano": "Feb 2009 - Nov 2015"
+      },
+      {
+        "titulo": "Contaduría Pública",
+        "institucion": "Universidad Mayor de San Simón",
+        "ano": "Feb 1998 - Dic 2005"
+      }
+    ],
+    "cursos": [
+      "Seguridad, Medio Ambiente y Salud Ocupacional, CAMIND",
+      "Análisis y tratamiento de No conformidades en ISO 9001, IBNORCA",
+      "Primeros Auxilios, CRUZ ROJA",
+      "Haccp y Control de Calidad en la Industria Alimentaria, SEDESEM",
+      "Gestión de Stocks y Almacenes, UNICEN"
+    ],
+    "habilidades": [
+      "Liderazgo",
+      "Empatía",
+      "Resolución de conflictos",
+      "Negociación",
+      "Atención al cliente",
+      "Compromiso",
+      "Responsabilidad",
+      "Trabajo en equipo",
+      "Excel, MS Word, Power Point, Access, Publisher",
+      "Manejo de información estadística y diagnósticos",
+      "Español, Inglés, Quechua"
+    ],
+    "cv_pdf": "#",
+    "estado": "activo",
+    "fecha_registro": new Date().toISOString()
+  },
   {
     "id": "jessica-ventas-0",
     "nombre": "Jessica",
@@ -166,7 +254,7 @@ export const personas: Persona[] = [
     "portada": "/portada_web_alvaroruben.jpg",
     "profesion": "Ingeniero Industrial",
     "paisId": "1",
-    "areaId": "2",
+    "areaId": "17",
     "ciudadId": "5",
     "telefono": "+591 60478509",
     "email": "rubenguti1015@gmail.com",
@@ -1129,904 +1217,1126 @@ export const personas: Persona[] = [
     "fecha_registro": "2026-05-20T03:46:59.137Z"
   },
   {
-    "id": "andres-caceres-20",
-    "nombre": "Andres",
-    "apellido": "Caceres",
-    "foto": "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?auto=format&fit=crop&q=80&w=600",
-    "profesion": "Arquitecto",
-    "paisId": "1",
-    "areaId": "5",
-    "ciudadId": "3",
-    "telefono": "+591 74465590",
-    "email": "andres.caceres20@email.com",
-    "descripcion": "Profesional comprometido con la excelencia. Amplia experiencia en Arquitecto. Dispuesto a aportar soluciones efectivas y trabajar en equipo.",
-    "experiencia": [
-      {
-        "cargo": "Especialista en Arquitecto",
-        "empresa": "Empresa Líder S.A.",
-        "duracion": "2019 - Presente"
-      },
-      {
-        "cargo": "Asistente / Junior",
-        "empresa": "Consultora Nacional",
-        "duracion": "2016 - 2019"
-      }
-    ],
-    "formacion": [
-      {
-        "titulo": "Licenciatura / Técnico en Arquitecto",
-        "institucion": "Universidad / Instituto Reconocido",
-        "ano": "2016"
-      }
-    ],
-    "cursos": [
-      "Actualización profesional",
-      "Herramientas digitales"
-    ],
-    "habilidades": [
-      "Trabajo en equipo",
-      "Resolución de problemas",
-      "Liderazgo",
-      "Comunicación efectiva"
-    ],
-    "cv_pdf": "#",
-    "estado": "activo",
-    "fecha_registro": "2026-05-20T03:46:59.137Z"
-  },
-  {
-    "id": "brenda-caceres-21",
-    "nombre": "Brenda",
-    "apellido": "Caceres",
-    "foto": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=600",
-    "profesion": "Profesora de Física",
-    "paisId": "1",
-    "areaId": "6",
-    "ciudadId": "4",
-    "telefono": "+591 78381452",
-    "email": "brenda.caceres21@email.com",
-    "descripcion": "Profesional comprometido con la excelencia. Amplia experiencia en Profesor de Física. Dispuesto a aportar soluciones efectivas y trabajar en equipo.",
-    "experiencia": [
-      {
-        "cargo": "Especialista en Profesor de Física",
-        "empresa": "Empresa Líder S.A.",
-        "duracion": "2019 - Presente"
-      },
-      {
-        "cargo": "Asistente / Junior",
-        "empresa": "Consultora Nacional",
-        "duracion": "2016 - 2019"
-      }
-    ],
-    "formacion": [
-      {
-        "titulo": "Licenciatura / Técnico en Profesor de Física",
-        "institucion": "Universidad / Instituto Reconocido",
-        "ano": "2016"
-      }
-    ],
-    "cursos": [
-      "Actualización profesional",
-      "Herramientas digitales"
-    ],
-    "habilidades": [
-      "Trabajo en equipo",
-      "Resolución de problemas",
-      "Liderazgo",
-      "Comunicación efectiva"
-    ],
-    "cv_pdf": "#",
-    "estado": "activo",
-    "fecha_registro": "2026-05-20T03:46:59.137Z"
-  },
-  {
-    "id": "carlos-caceres-22",
-    "nombre": "Carlos",
-    "apellido": "Caceres",
-    "foto": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=600",
-    "profesion": "Administrador de Base de Datos",
-    "paisId": "1",
-    "areaId": "7",
-    "ciudadId": "5",
-    "telefono": "+591 73542841",
-    "email": "carlos.caceres22@email.com",
-    "descripcion": "Profesional comprometido con la excelencia. Amplia experiencia en Administrador de BD. Dispuesto a aportar soluciones efectivas y trabajar en equipo.",
-    "experiencia": [
-      {
-        "cargo": "Especialista en Administrador de BD",
-        "empresa": "Empresa Líder S.A.",
-        "duracion": "2019 - Presente"
-      },
-      {
-        "cargo": "Asistente / Junior",
-        "empresa": "Consultora Nacional",
-        "duracion": "2016 - 2019"
-      }
-    ],
-    "formacion": [
-      {
-        "titulo": "Licenciatura / Técnico en Administrador de BD",
-        "institucion": "Universidad / Instituto Reconocido",
-        "ano": "2016"
-      }
-    ],
-    "cursos": [
-      "Actualización profesional",
-      "Herramientas digitales"
-    ],
-    "habilidades": [
-      "Trabajo en equipo",
-      "Resolución de problemas",
-      "Liderazgo",
-      "Comunicación efectiva"
-    ],
-    "cv_pdf": "#",
-    "estado": "activo",
-    "fecha_registro": "2026-05-20T03:46:59.137Z"
-  },
-  {
-    "id": "daniela-caceres-23",
-    "nombre": "Daniela",
-    "apellido": "Caceres",
-    "foto": "https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&q=80&w=600",
-    "profesion": "Mecánica Industrial",
-    "paisId": "1",
-    "areaId": "8",
-    "ciudadId": "6",
-    "telefono": "+591 73658590",
-    "email": "daniela.caceres23@email.com",
-    "descripcion": "Profesional comprometido con la excelencia. Amplia experiencia en Mecánico Industrial. Dispuesto a aportar soluciones efectivas y trabajar en equipo.",
-    "experiencia": [
-      {
-        "cargo": "Especialista en Mecánico Industrial",
-        "empresa": "Empresa Líder S.A.",
-        "duracion": "2019 - Presente"
-      },
-      {
-        "cargo": "Asistente / Junior",
-        "empresa": "Consultora Nacional",
-        "duracion": "2016 - 2019"
-      }
-    ],
-    "formacion": [
-      {
-        "titulo": "Licenciatura / Técnico en Mecánico Industrial",
-        "institucion": "Universidad / Instituto Reconocido",
-        "ano": "2016"
-      }
-    ],
-    "cursos": [
-      "Actualización profesional",
-      "Herramientas digitales"
-    ],
-    "habilidades": [
-      "Trabajo en equipo",
-      "Resolución de problemas",
-      "Liderazgo",
-      "Comunicación efectiva"
-    ],
-    "cv_pdf": "#",
-    "estado": "activo",
-    "fecha_registro": "2026-05-20T03:46:59.137Z"
-  },
-  {
-    "id": "ernesto-caceres-24",
-    "nombre": "Ernesto",
-    "apellido": "Caceres",
-    "foto": "https://images.unsplash.com/photo-1542596594-649edbc13630?auto=format&fit=crop&q=80&w=600",
-    "profesion": "Psicólogo",
-    "paisId": "1",
-    "areaId": "14",
-    "ciudadId": "1",
-    "telefono": "+591 73701106",
-    "email": "ernesto.caceres24@email.com",
-    "descripcion": "Profesional comprometido con la excelencia. Amplia experiencia en Psicólogo. Dispuesto a aportar soluciones efectivas y trabajar en equipo.",
-    "experiencia": [
-      {
-        "cargo": "Especialista en Psicólogo",
-        "empresa": "Empresa Líder S.A.",
-        "duracion": "2019 - Presente"
-      },
-      {
-        "cargo": "Asistente / Junior",
-        "empresa": "Consultora Nacional",
-        "duracion": "2016 - 2019"
-      }
-    ],
-    "formacion": [
-      {
-        "titulo": "Licenciatura / Técnico en Psicólogo",
-        "institucion": "Universidad / Instituto Reconocido",
-        "ano": "2016"
-      }
-    ],
-    "cursos": [
-      "Actualización profesional",
-      "Herramientas digitales"
-    ],
-    "habilidades": [
-      "Trabajo en equipo",
-      "Resolución de problemas",
-      "Liderazgo",
-      "Comunicación efectiva"
-    ],
-    "cv_pdf": "#",
-    "estado": "activo",
-    "fecha_registro": "2026-05-20T03:46:59.137Z"
-  },
-  {
-    "id": "fabiana-caceres-25",
-    "nombre": "Fabiana",
-    "apellido": "Caceres",
-    "foto": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=600",
-    "profesion": "Ingeniera Industrial",
-    "paisId": "1",
-    "areaId": "2",
-    "ciudadId": "2",
-    "telefono": "+591 77111340",
-    "email": "fabiana.caceres25@email.com",
-    "descripcion": "Profesional comprometido con la excelencia. Amplia experiencia en Ingeniero Industrial. Dispuesto a aportar soluciones efectivas y trabajar en equipo.",
-    "experiencia": [
-      {
-        "cargo": "Especialista en Ingeniero Industrial",
-        "empresa": "Empresa Líder S.A.",
-        "duracion": "2019 - Presente"
-      },
-      {
-        "cargo": "Asistente / Junior",
-        "empresa": "Consultora Nacional",
-        "duracion": "2016 - 2019"
-      }
-    ],
-    "formacion": [
-      {
-        "titulo": "Licenciatura / Técnico en Ingeniero Industrial",
-        "institucion": "Universidad / Instituto Reconocido",
-        "ano": "2016"
-      }
-    ],
-    "cursos": [
-      "Actualización profesional",
-      "Herramientas digitales"
-    ],
-    "habilidades": [
-      "Trabajo en equipo",
-      "Resolución de problemas",
-      "Liderazgo",
-      "Comunicación efectiva"
-    ],
-    "cv_pdf": "#",
-    "estado": "activo",
-    "fecha_registro": "2026-05-20T03:46:59.137Z"
-  },
-  {
-    "id": "gabriel-caceres-26",
-    "nombre": "Gabriel",
-    "apellido": "Caceres",
-    "foto": "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=600",
-    "profesion": "Ingeniero Eléctrico",
-    "paisId": "1",
-    "areaId": "3",
-    "ciudadId": "3",
-    "telefono": "+591 79153912",
-    "email": "gabriel.caceres26@email.com",
-    "descripcion": "Profesional comprometido con la excelencia. Amplia experiencia en Ingeniero Eléctrico. Dispuesto a aportar soluciones efectivas y trabajar en equipo.",
-    "experiencia": [
-      {
-        "cargo": "Especialista en Ingeniero Eléctrico",
-        "empresa": "Empresa Líder S.A.",
-        "duracion": "2019 - Presente"
-      },
-      {
-        "cargo": "Asistente / Junior",
-        "empresa": "Consultora Nacional",
-        "duracion": "2016 - 2019"
-      }
-    ],
-    "formacion": [
-      {
-        "titulo": "Licenciatura / Técnico en Ingeniero Eléctrico",
-        "institucion": "Universidad / Instituto Reconocido",
-        "ano": "2016"
-      }
-    ],
-    "cursos": [
-      "Actualización profesional",
-      "Herramientas digitales"
-    ],
-    "habilidades": [
-      "Trabajo en equipo",
-      "Resolución de problemas",
-      "Liderazgo",
-      "Comunicación efectiva"
-    ],
-    "cv_pdf": "#",
-    "estado": "activo",
-    "fecha_registro": "2026-05-20T03:46:59.137Z"
-  },
-  {
-    "id": "helena-caceres-27",
-    "nombre": "Helena",
-    "apellido": "Caceres",
-    "foto": "https://images.unsplash.com/photo-1505503693641-1926193e8d57?auto=format&fit=crop&q=80&w=600",
-    "profesion": "Especialista en Marketing",
-    "paisId": "1",
-    "areaId": "4",
-    "ciudadId": "4",
-    "telefono": "+591 71800006",
-    "email": "helena.caceres27@email.com",
-    "descripcion": "Profesional comprometido con la excelencia. Amplia experiencia en Especialista en Marketing. Dispuesto a aportar soluciones efectivas y trabajar en equipo.",
-    "experiencia": [
-      {
-        "cargo": "Especialista en Especialista en Marketing",
-        "empresa": "Empresa Líder S.A.",
-        "duracion": "2019 - Presente"
-      },
-      {
-        "cargo": "Asistente / Junior",
-        "empresa": "Consultora Nacional",
-        "duracion": "2016 - 2019"
-      }
-    ],
-    "formacion": [
-      {
-        "titulo": "Licenciatura / Técnico en Especialista en Marketing",
-        "institucion": "Universidad / Instituto Reconocido",
-        "ano": "2016"
-      }
-    ],
-    "cursos": [
-      "Actualización profesional",
-      "Herramientas digitales"
-    ],
-    "habilidades": [
-      "Trabajo en equipo",
-      "Resolución de problemas",
-      "Liderazgo",
-      "Comunicación efectiva"
-    ],
-    "cv_pdf": "#",
-    "estado": "activo",
-    "fecha_registro": "2026-05-20T03:46:59.137Z"
-  },
-  {
-    "id": "ignacio-caceres-28",
-    "nombre": "Ignacio",
-    "apellido": "Caceres",
-    "foto": "https://images.unsplash.com/photo-1527980965255-d3b416303d12?auto=format&fit=crop&q=80&w=600",
-    "profesion": "Maestro de Obra",
-    "paisId": "1",
-    "areaId": "5",
-    "ciudadId": "5",
-    "telefono": "+591 74987030",
-    "email": "ignacio.caceres28@email.com",
-    "descripcion": "Profesional comprometido con la excelencia. Amplia experiencia en Maestro de Obra. Dispuesto a aportar soluciones efectivas y trabajar en equipo.",
-    "experiencia": [
-      {
-        "cargo": "Especialista en Maestro de Obra",
-        "empresa": "Empresa Líder S.A.",
-        "duracion": "2019 - Presente"
-      },
-      {
-        "cargo": "Asistente / Junior",
-        "empresa": "Consultora Nacional",
-        "duracion": "2016 - 2019"
-      }
-    ],
-    "formacion": [
-      {
-        "titulo": "Licenciatura / Técnico en Maestro de Obra",
-        "institucion": "Universidad / Instituto Reconocido",
-        "ano": "2016"
-      }
-    ],
-    "cursos": [
-      "Actualización profesional",
-      "Herramientas digitales"
-    ],
-    "habilidades": [
-      "Trabajo en equipo",
-      "Resolución de problemas",
-      "Liderazgo",
-      "Comunicación efectiva"
-    ],
-    "cv_pdf": "#",
-    "estado": "activo",
-    "fecha_registro": "2026-05-20T03:46:59.137Z"
-  },
-  {
-    "id": "julia-caceres-29",
-    "nombre": "Julia",
-    "apellido": "Caceres",
-    "foto": "https://images.unsplash.com/photo-1543132220-4bf52924743a?auto=format&fit=crop&q=80&w=600",
-    "profesion": "Tutora Académica",
-    "paisId": "1",
-    "areaId": "6",
-    "ciudadId": "6",
-    "telefono": "+591 72283676",
-    "email": "julia.caceres29@email.com",
-    "descripcion": "Profesional comprometido con la excelencia. Amplia experiencia en Tutor Académico. Dispuesto a aportar soluciones efectivas y trabajar en equipo.",
-    "experiencia": [
-      {
-        "cargo": "Especialista en Tutor Académico",
-        "empresa": "Empresa Líder S.A.",
-        "duracion": "2019 - Presente"
-      },
-      {
-        "cargo": "Asistente / Junior",
-        "empresa": "Consultora Nacional",
-        "duracion": "2016 - 2019"
-      }
-    ],
-    "formacion": [
-      {
-        "titulo": "Licenciatura / Técnico en Tutor Académico",
-        "institucion": "Universidad / Instituto Reconocido",
-        "ano": "2016"
-      }
-    ],
-    "cursos": [
-      "Actualización profesional",
-      "Herramientas digitales"
-    ],
-    "habilidades": [
-      "Trabajo en equipo",
-      "Resolución de problemas",
-      "Liderazgo",
-      "Comunicación efectiva"
-    ],
-    "cv_pdf": "#",
-    "estado": "activo",
-    "fecha_registro": "2026-05-20T03:46:59.137Z"
-  },
-  {
-    "id": "andres-delgado-30",
-    "nombre": "Andres",
-    "apellido": "Delgado",
-    "foto": "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&q=80&w=600",
-    "profesion": "Desarrollador Frontend",
-    "paisId": "1",
-    "areaId": "7",
-    "ciudadId": "1",
-    "telefono": "+591 74670120",
-    "email": "andres.delgado30@email.com",
-    "descripcion": "Profesional comprometido con la excelencia. Amplia experiencia en Desarrollador Frontend. Dispuesto a aportar soluciones efectivas y trabajar en equipo.",
-    "experiencia": [
-      {
-        "cargo": "Especialista en Desarrollador Frontend",
-        "empresa": "Empresa Líder S.A.",
-        "duracion": "2019 - Presente"
-      },
-      {
-        "cargo": "Asistente / Junior",
-        "empresa": "Consultora Nacional",
-        "duracion": "2016 - 2019"
-      }
-    ],
-    "formacion": [
-      {
-        "titulo": "Licenciatura / Técnico en Desarrollador Frontend",
-        "institucion": "Universidad / Instituto Reconocido",
-        "ano": "2016"
-      }
-    ],
-    "cursos": [
-      "Actualización profesional",
-      "Herramientas digitales"
-    ],
-    "habilidades": [
-      "Trabajo en equipo",
-      "Resolución de problemas",
-      "Liderazgo",
-      "Comunicación efectiva"
-    ],
-    "cv_pdf": "#",
-    "estado": "activo",
-    "fecha_registro": "2026-05-20T03:46:59.137Z"
-  },
-  {
-    "id": "brenda-delgado-31",
-    "nombre": "Brenda",
-    "apellido": "Delgado",
-    "foto": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=600",
-    "profesion": "Técnica en Maquinaria Pesada",
-    "paisId": "1",
-    "areaId": "8",
-    "ciudadId": "2",
-    "telefono": "+591 75126319",
-    "email": "brenda.delgado31@email.com",
-    "descripcion": "Profesional comprometido con la excelencia. Amplia experiencia en Técnico en Maquinaria Pesada. Dispuesto a aportar soluciones efectivas y trabajar en equipo.",
-    "experiencia": [
-      {
-        "cargo": "Especialista en Técnico en Maquinaria Pesada",
-        "empresa": "Empresa Líder S.A.",
-        "duracion": "2019 - Presente"
-      },
-      {
-        "cargo": "Asistente / Junior",
-        "empresa": "Consultora Nacional",
-        "duracion": "2016 - 2019"
-      }
-    ],
-    "formacion": [
-      {
-        "titulo": "Licenciatura / Técnico en Técnico en Maquinaria Pesada",
-        "institucion": "Universidad / Instituto Reconocido",
-        "ano": "2016"
-      }
-    ],
-    "cursos": [
-      "Actualización profesional",
-      "Herramientas digitales"
-    ],
-    "habilidades": [
-      "Trabajo en equipo",
-      "Resolución de problemas",
-      "Liderazgo",
-      "Comunicación efectiva"
-    ],
-    "cv_pdf": "#",
-    "estado": "activo",
-    "fecha_registro": "2026-05-20T03:46:59.137Z"
-  },
-  {
-    "id": "carlos-delgado-32",
-    "nombre": "Carlos",
-    "apellido": "Delgado",
-    "foto": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=600",
-    "profesion": "Fisioterapeuta",
+    "id": "claudia-acha-gonzales",
+    "nombre": "Claudia",
+    "apellido": "Achá Gonzales",
+    "foto": "/claudiaachagonzales_rostro.jpg",
+    "portada": "/claudiaachagonzales_portada_web.jpg",
+    "profesion": "Médica Cirujana",
     "paisId": "1",
     "areaId": "1",
-    "ciudadId": "3",
-    "telefono": "+591 77396080",
-    "email": "carlos.delgado32@email.com",
-    "descripcion": "Profesional comprometido con la excelencia. Amplia experiencia en Fisioterapeuta. Dispuesto a aportar soluciones efectivas y trabajar en equipo.",
+    "ciudadId": "2",
+    "telefono": "+591 79779335",
+    "email": "alejandra_m27@hotmail.com",
+    "descripcion": "Profesional de la Salud como Médico General con más de 10 años de experiencia en atención primaria en salud. Experta en el manejo de pacientes con una evaluación, diagnóstico y tratamientos complejos, manejo del soporte vital avanzado y procedimientos de emergencia, con un firme compromiso por la mejora continua de la calidad asistencial y el bienestar integral del paciente, con mucha paciencia, empatía y trabajo en equipo.",
     "experiencia": [
       {
-        "cargo": "Especialista en Fisioterapeuta",
-        "empresa": "Empresa Líder S.A.",
-        "duracion": "2019 - Presente"
+        "cargo": "Responsable Comité del DIT-CDI",
+        "empresa": "CENTRO DE SALUD TARATA, POSTA HUAYCULI, IZATA, HUERTA MAYU, PUJYUNI",
+        "duracion": "01/07/2024 - 13/10/2025"
       },
       {
-        "cargo": "Asistente / Junior",
-        "empresa": "Consultora Nacional",
-        "duracion": "2016 - 2019"
+        "cargo": "Responsable y Coordinadora Programa AIDA",
+        "empresa": "CENTRO DE SALUD TARATA, POSTA HUAYCULI, IZATA, HUERTA MAYU, PUJYUNI",
+        "duracion": "05/05/2025 - 13/10/2025"
+      },
+      {
+        "cargo": "Responsable Comité de Inmunización y Esavis del Municipio de Tarata",
+        "empresa": "CENTRO DE SALUD TARATA, POSTA HUAYCULI, IZATA, HUERTA MAYU, PUJYUNI",
+        "duracion": "01/01/2024 - 13/10/2025"
+      },
+      {
+        "cargo": "Apoyo en el Comité Técnico Administrativo",
+        "empresa": "CENTRO DE SALUD TARATA, POSTA HUAYCULI, IZATA, HUERTA MAYU, PUJYUNI",
+        "duracion": "22/05/2022 - 22/05/2023"
+      },
+      {
+        "cargo": "Responsable del Programa Chagas",
+        "empresa": "CENTRO DE SALUD TARATA, POSTA HUAYCULI, IZATA, HUERTA MAYU, PUJYUNI",
+        "duracion": "23/11/2017 - 13/10/2025"
+      },
+      {
+        "cargo": "Responsable Presidenta del Comité de Lactancia Materna",
+        "empresa": "CENTRO DE SALUD TARATA, POSTA HUAYCULI, IZATA, HUERTA MAYU, PUJYUNI",
+        "duracion": "12/08/2019 - 13/10/2025"
+      },
+      {
+        "cargo": "Médico Bono Juana Azurduy",
+        "empresa": "CENTRO DE SALUD TARATA, CENTRO DE SALUD AMBULATORIO HUAYCULI, POSTA IZATA, POSTA HUERTA MAYU, POSTA PUJYUNI",
+        "duracion": "23/11/2017 - 13/10/2025"
+      },
+      {
+        "cargo": "Responsable Presidenta del Comité de Lactancia Materna",
+        "empresa": "HOSPITAL DE ENTRE RIOS, POSTA ANDINO, POSTA CHANCADORA, POSTA ALTO LINARES",
+        "duracion": "06/04/2015 - 22/11/2017"
+      },
+      {
+        "cargo": "Médico Comunitario BJA Municipio de Entre Ríos",
+        "empresa": "HOSPITAL DE ENTRE RIOS, POSTA ANDINO, POSTA CHANCADORA, POSTA ALTO LINARES",
+        "duracion": "06/04/2015 - 22/11/2017"
+      },
+      {
+        "cargo": "Médico de Planta",
+        "empresa": "CENTRO DE SALUD RIO BLANCO",
+        "duracion": "12/01/2015 - 30/03/2015"
+      },
+      {
+        "cargo": "Médico de Planta",
+        "empresa": "CENTRO DE SALUD RIO BLANCO",
+        "duracion": "03/01/2014 - 31/12/2014"
+      },
+      {
+        "cargo": "Ad-Honores",
+        "empresa": "CENTRO DE SALUD ENTRE RIOS",
+        "duracion": "01/10/2013 - 31/12/2013"
       }
     ],
     "formacion": [
       {
-        "titulo": "Licenciatura / Técnico en Fisioterapeuta",
-        "institucion": "Universidad / Instituto Reconocido",
-        "ano": "2016"
-      }
-    ],
-    "cursos": [
-      "Actualización profesional",
-      "Herramientas digitales"
-    ],
-    "habilidades": [
-      "Trabajo en equipo",
-      "Resolución de problemas",
-      "Liderazgo",
-      "Comunicación efectiva"
-    ],
-    "cv_pdf": "#",
-    "estado": "activo",
-    "fecha_registro": "2026-05-20T03:46:59.137Z"
-  },
-  {
-    "id": "daniela-delgado-33",
-    "nombre": "Daniela",
-    "apellido": "Delgado",
-    "foto": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=600",
-    "profesion": "Ingeniera Mecatrónica",
-    "paisId": "1",
-    "areaId": "2",
-    "ciudadId": "4",
-    "telefono": "+591 73851160",
-    "email": "daniela.delgado33@email.com",
-    "descripcion": "Profesional comprometido con la excelencia. Amplia experiencia en Ingeniero Mecatrónico. Dispuesto a aportar soluciones efectivas y trabajar en equipo.",
-    "experiencia": [
-      {
-        "cargo": "Especialista en Ingeniero Mecatrónico",
-        "empresa": "Empresa Líder S.A.",
-        "duracion": "2019 - Presente"
+        "titulo": "Diplomado en Salud Materno Infantil",
+        "institucion": "UNIVERSIDAD PRIVADA DEL VALLE",
+        "ano": "2025"
       },
       {
-        "cargo": "Asistente / Junior",
-        "empresa": "Consultora Nacional",
-        "duracion": "2016 - 2019"
-      }
-    ],
-    "formacion": [
-      {
-        "titulo": "Licenciatura / Técnico en Ingeniero Mecatrónico",
-        "institucion": "Universidad / Instituto Reconocido",
-        "ano": "2016"
+        "titulo": "Médica Cirujana",
+        "institucion": "UNIVERSIDAD MAYOR DE SAN SIMON",
+        "ano": "2013"
       }
     ],
     "cursos": [
-      "Actualización profesional",
-      "Herramientas digitales"
+      "III Congreso Científico Internacional Materno Infantil Bono Juana Azurduy",
+      "Curso Nacional de Actualización del Programa Ampliado de Inmunización 2025",
+      "Actualización en el Manejo Clínico Integral y Preventivo del Dengue",
+      "Programa de Formación Excel básico e intermedio",
+      "Ley de Administración y Control Gubernamental Ley Safco 1178",
+      "Tallr Práctico y Clínico de pruebas rápidas VIH",
+      "Curso introductorio del enfoque Cuidado para el Desarrollo Infantil",
+      "Curso Internacional de Nutrición Infantil",
+      "Capacitación de Agente Censal",
+      "I Congreso Científico Internacional Materno Infantil Bono Juana Azurduy",
+      "Cursos Departamental de Actualización de Manejo del Programa Integral VIH",
+      "Atención de Chagas Crónico, Chagas Congénito",
+      "Prevención de la Violencia",
+      "Jornada Internacional de Pediatría",
+      "Jornada Internacional de Actualización en Manejo de Pacientes en Emergencia",
+      "Ley 1152 Sistema Único de Salud",
+      "Ley 475",
+      "Curso Política Safci",
+      "Taller de Capacitación Protocolizada del Paciente",
+      "Simposio Internacional Enfermedades Degenerativas",
+      "Seminario Taller Orientación y Prevención en Diabetes",
+      "Ley Safco",
+      "Curso de Quechua",
+      "Taller de Lactancia Materna",
+      "Legislación y Proceso Parlamentario y Protocolo",
+      "Simposio de Electrocardiografía Básica",
+      "Atención Primaria en Salud, Nutrición e Interculturalidad",
+      "Capacitación en el Sistema Soaps",
+      "Taller de Capacitación en Carpetas Familiares Safci",
+      "Comisión de Calificación de Productos Farmacéuticos de Insumos de Laboratorio"
     ],
     "habilidades": [
-      "Trabajo en equipo",
-      "Resolución de problemas",
+      "Responsabilidad",
+      "Puntualidad",
       "Liderazgo",
-      "Comunicación efectiva"
+      "Capacidad analítica",
+      "Manejo de datos",
+      "Trabajo en equipo",
+      "Castellano - Nativo",
+      "Quechua - Básico"
     ],
     "cv_pdf": "#",
     "estado": "activo",
-    "fecha_registro": "2026-05-20T03:46:59.137Z"
+    "fecha_registro": new Date().toISOString()
   },
   {
-    "id": "ernesto-delgado-34",
-    "nombre": "Ernesto",
-    "apellido": "Delgado",
-    "foto": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=600",
-    "profesion": "Auditor de Energía",
-    "paisId": "1",
-    "areaId": "3",
-    "ciudadId": "5",
-    "telefono": "+591 78149592",
-    "email": "ernesto.delgado34@email.com",
-    "descripcion": "Profesional comprometido con la excelencia. Amplia experiencia en Auditor de Energía. Dispuesto a aportar soluciones efectivas y trabajar en equipo.",
-    "experiencia": [
-      {
-        "cargo": "Especialista en Auditor de Energía",
-        "empresa": "Empresa Líder S.A.",
-        "duracion": "2019 - Presente"
-      },
-      {
-        "cargo": "Asistente / Junior",
-        "empresa": "Consultora Nacional",
-        "duracion": "2016 - 2019"
-      }
-    ],
-    "formacion": [
-      {
-        "titulo": "Licenciatura / Técnico en Auditor de Energía",
-        "institucion": "Universidad / Instituto Reconocido",
-        "ano": "2016"
-      }
-    ],
-    "cursos": [
-      "Actualización profesional",
-      "Herramientas digitales"
-    ],
-    "habilidades": [
-      "Trabajo en equipo",
-      "Resolución de problemas",
-      "Liderazgo",
-      "Comunicación efectiva"
-    ],
-    "cv_pdf": "#",
-    "estado": "activo",
-    "fecha_registro": "2026-05-20T03:46:59.137Z"
-  },
-  {
-    "id": "fabiana-delgado-35",
-    "nombre": "Fabiana",
-    "apellido": "Delgado",
-    "foto": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=600",
-    "profesion": "Administradora de Empresas",
+    "id": "claudio-masavi-cabrera",
+    "nombre": "Claudio",
+    "apellido": "Masavi Cabrera",
+    "foto": "/claudiomasavicabrera_rostro.jpg",
+    "portada": "/claudiomasavicabrera_portada_web.jpg",
+    "profesion": "Administrador y Abogado",
     "paisId": "1",
     "areaId": "4",
-    "ciudadId": "6",
-    "telefono": "+591 78305534",
-    "email": "fabiana.delgado35@email.com",
-    "descripcion": "Profesional comprometido con la excelencia. Amplia experiencia en Administrador de Empresas. Dispuesto a aportar soluciones efectivas y trabajar en equipo.",
+    "ciudadId": "3",
+    "telefono": "+591 60921615",
+    "email": "claudiomasavi@hotmail.com",
+    "descripcion": "Persona dinámica, con alto estándar de responsabilidad, honestidad, con gran sentido ético y moral, capaz de generar grandes ideas que contribuya a la mejora y la resolución de conflicto y mejoramiento de la empresa y o personal de la misma. Tras años de experiencia, he tomado la decisión de reorientar mi carrera profesional con el ánimo de continuar aprendiendo y, también, aportar toda mi experiencia adquirida. Considero que el cambio es un signo de capacidad de superación y, por ello, creo que siempre sería capaz de aportar valor en la empresa en la que me encuentre. Mi objetivo principal es desarrollarme profesionalmente y evolucionar en mi sector, de modo que busco oportunidades que me permitan hacerlo, al tiempo que trataré de alinearme completamente con los objetivos de la empresa.",
     "experiencia": [
       {
-        "cargo": "Especialista en Administrador de Empresas",
-        "empresa": "Empresa Líder S.A.",
-        "duracion": "2019 - Presente"
+        "cargo": "Administrador",
+        "empresa": "DEMDE INVERSIONES SRL",
+        "duracion": "2017 - 2026 (Actualmente)"
       },
       {
-        "cargo": "Asistente / Junior",
-        "empresa": "Consultora Nacional",
-        "duracion": "2016 - 2019"
+        "cargo": "Gerente Administrativo",
+        "empresa": "CIPSA JARDINERÍA Y FUMIGACIÓN",
+        "duracion": "Agosto 2016 - Junio 2017"
+      },
+      {
+        "cargo": "Asesor Legal",
+        "empresa": "FÉNIX CONSULTORES",
+        "duracion": "Enero 2009 - Noviembre 2015"
       }
     ],
     "formacion": [
       {
-        "titulo": "Licenciatura / Técnico en Administrador de Empresas",
-        "institucion": "Universidad / Instituto Reconocido",
+        "titulo": "Técnico Medio en Administración de Empresas",
+        "institucion": "Universidad Domingo Savio",
         "ano": "2016"
+      },
+      {
+        "titulo": "Licenciado en Derecho",
+        "institucion": "Universidad Autónoma Gabriel René Moreno",
+        "ano": "2012"
+      },
+      {
+        "titulo": "Técnico Medio en Auxiliar Contable",
+        "institucion": "Instituto Incor",
+        "ano": "2010"
+      },
+      {
+        "titulo": "Bachiller en Humanidades",
+        "institucion": "Colegio San Sebastián",
+        "ano": "2005"
       }
     ],
     "cursos": [
-      "Actualización profesional",
-      "Herramientas digitales"
+      "Derecho Laboral, Centro de Ciencia y Tecnología, Santiago de Chile Post Grado",
+      "Resolución de Conflictos Empresariales, Centro de Ciencia y Tecnología, Santiago de Chile Post Grado",
+      "Contrato y Sociedades Comerciales, Centro de Ciencia y Tecnología, Santiago de Chile Post Grado",
+      "Derecho Tributario, Centro de Ciencia y Tecnología, Santiago de Chile Post Grado",
+      "Bancarización Da Vinci, KABEZ CONTACTO & EXIT BRISTISH",
+      "Normas Básicas del Sistema de Administración de Bienes y Servicios, Facultad de Ciencias Jurídicas y Políticas UMSS",
+      "Proceso de Inmunización Covid-19, Facultad de Ciencias Jurídicas y Políticas UMSS",
+      "Derecho Autonómico, Facultad de Derecho y Ciencias Políticas Universidad Mayor de San Andrés",
+      "Incorporación de cláusulas compromisorias en los contratos, Centro de Conciliación y Arbitraje",
+      "La Institucionalización del Funcionario Público en la Ley General del Trabajo, Facultad de Derecho y Ciencias Políticas Universidad Mayor de San Andrés",
+      "Ética en el ejercicio de la Función Pública frente a la corrupción, Centro Jurídico de Investigación y Formación PROBIDAD"
     ],
     "habilidades": [
-      "Trabajo en equipo",
-      "Resolución de problemas",
-      "Liderazgo",
-      "Comunicación efectiva"
+      "Honesto",
+      "Responsable",
+      "Emprendedor",
+      "Español: Nativo",
+      "Ingles: Básico"
     ],
     "cv_pdf": "#",
     "estado": "activo",
-    "fecha_registro": "2026-05-20T03:46:59.137Z"
+    "fecha_registro": new Date().toISOString()
   },
   {
-    "id": "gabriel-delgado-36",
-    "nombre": "Gabriel",
-    "apellido": "Delgado",
-    "foto": "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?auto=format&fit=crop&q=80&w=600",
+    "id": "daniel-rodolfo-ramirez-rivero",
+    "nombre": "Daniel Rodolfo",
+    "apellido": "Ramirez Rivero",
+    "foto": "/danielrodolforamirezrivero_rostro.jpg",
+    "portada": "/danielrodolforamirezrivero_portada_web.jpg",
+    "profesion": "Abogado",
+    "paisId": "1",
+    "areaId": "13",
+    "ciudadId": "1",
+    "telefono": "+591 76758152",
+    "email": "rodo150385@gmail.com",
+    "descripcion": "Licenciado en Derecho con experiencia en asesoría jurídica, estrategias legales y coordinación institucional. Especializado en derecho penal, civil, familiar, administrativo y constitucional, con formación en políticas públicas, función pública y normativa vigente y Especialista en Materia Internacional Público y Privado. Experiencia en análisis jurídico, gestión de casos y relacionamiento interinstitucional. Profesional orientado a resultados, cumplimiento normativo y mejora de procesos legales.",
+    "experiencia": [
+      {
+        "cargo": "Coordinador de la Organizacion Fuerza y Legado",
+        "empresa": "Organizacion Fuerza y Legado",
+        "duracion": "15 de agosto de 2025 - 15 de enero de 2026"
+      },
+      {
+        "cargo": "Asesoria Juridica",
+        "empresa": "TRIFARMA Distribuidora de Medicamentos",
+        "duracion": "01 de noviembre de 2022 - 15 de julio de 2023"
+      },
+      {
+        "cargo": "Estudio Juridico y Estrategias Juridicas",
+        "empresa": "MARIÑO&ASOCIADOS",
+        "duracion": "04 de junio de 2022 - 04 de junio de 2025"
+      }
+    ],
+    "formacion": [
+      {
+        "titulo": "Diplomado en Educacion Superior en Formacion Por Competencias",
+        "institucion": "Universidad Union Bolivariana",
+        "ano": "02 de mayo de 2024"
+      },
+      {
+        "titulo": "Licenciado en Derecho",
+        "institucion": "Universidad San Francisco de Asis",
+        "ano": "28 de diciembre de 2020"
+      },
+      {
+        "titulo": "Bachiller en Humanidades",
+        "institucion": "Colegio Particular La Paz",
+        "ano": "22 de julio de 2009"
+      }
+    ],
+    "cursos": [
+      "Curso Nacional en Microsoft Office Word - Nivel Avanzado, LEADBO CONSULTING",
+      "Curso Nacional en Microsoft Office Excel - Nivel Avanzado, LEADBO CONSULTING",
+      "Curso Nacional en Microsoft Office Power Point - Nivel Avanzado, LEADBO CONSULTING",
+      "Ley N.070, Ley de la Educacion \"Avelino Siñani-Elizardo Perez\", LEADBO CONSULTING",
+      "Ley No.548 Codigo Niña, Niño y Adolescente, LEADBO CONSULTING",
+      "Ley No.1173 Lucha Integral contra la Violencia a Niñas, Niños, Adolescentes y Mujeres, LEADBO CONSULTING",
+      "Ley No.348 Ley Integral para Garantizar a las mujeres una Vida Libre de Violencia, LEADBO CONSULTING",
+      "Ley No.2341 Ley del Procedimiento Administrativo, LEADBO CONSULTING",
+      "Prevencion de la Violencia en el marco del Decreto Supremo No.3981, LEADBO CONSULTING",
+      "Responsabilidad por la Funcion Pública Decreto Supremo No.23318-A, LEADBO CONSULTING",
+      "Politicas Públicas en el Estado Plurinacional de Bolivia, LEADBO CONSULTING",
+      "Ley No.1178 SAFCO Ley de Administracion y Contriol Gubernamentales, LEADBO CONSULTING",
+      "Ley No.045 Ley Contra el Racismo y Toda Forma de Discriminacion, LEADBO CONSULTING",
+      "Ley No.439 Código Procesal Civil, LEADBO CONSULTING",
+      "Ley No. 004 Ley de Lucha Contra la Corrupcion, Enriquecimiento Ilícito e Investigación de Fortunas \"Marcelo Quiroga Santa Cruz\", LEADBO CONSULTING",
+      "Ley No. 12760 Código Civil, LEADBO CONSULTING",
+      "Certificado \"Sociologia Comprometida de Pierre Bourdieu\", Carrera de Sociologia, IDIS UMSA",
+      "Certificado Seminario \"El rol del Tribunal Constitucional de Bolivia\", Universidad San Francisco de Asis",
+      "Certificado \"¿Autonomías Indígenas o Campesinas?\", Facultad de Ciencias Sociales \"UMSA\"",
+      "Certificado de Participación en el \"Taller sobre líneas jurisdiccionales\", OCADEM & PE",
+      "Certificado en Especializacion \"II FORO DE CRIMINOLOGIA\", USFSA",
+      "Certificado \"Los nuevos liderazgos y las perspectivas epistemológicas\", UMSA",
+      "Reconocimiento Condecoracion \"EMBLEMA DE ORO\", Comando General De La Policia Nacional",
+      "Reconocimiento Condecoracion \"EMBLEMA DE ORO\", Comado Departamental de la Policia Nacional"
+    ],
+    "habilidades": [
+      "Derecho Penal",
+      "Derecho Civil",
+      "Derecho Familiar",
+      "Derecho Administrativo Ley SAFCO",
+      "Politicas y funcion Publica",
+      "Derecho Constitucional",
+      "Derecho Internacional Publico y Privado"
+    ],
+    "cv_pdf": "#",
+    "estado": "activo",
+    "fecha_registro": new Date().toISOString()
+  },
+  {
+    "id": "delia-huanapaco-gutierrez",
+    "nombre": "Delia",
+    "apellido": "Huañapaco Gutierrez",
+    "foto": "/deliahuanapacogutierrez_rostro.jpg",
+    "portada": "/deliahuanapacogutierrez_portada_web.jpg",
+    "profesion": "Ingeniería Comercial",
+    "paisId": "1",
+    "areaId": "18",
+    "ciudadId": "1",
+    "telefono": "+591 67062148",
+    "email": "deliagutierrez108@gmail.com",
+    "descripcion": "Ingeniera Comercial con experiencia en gestión administrativa y atención al cliente en instituciones públicas del ámbito cultural y de salud. Con conocimientos en procesos administrativos, manejo documental, apoyo operativo y cumplimiento de normativa pública, incluyendo la Ley 1178 SAFCO. Capacitada en contabilidad básica, operaciones financieras y servicio al cliente, con formación complementaria en idioma aymara. Profesional organizada, responsable y orientada a resultados, con habilidades de comunicación, trabajo en equipo y compromiso con la eficiencia en la gestión administrativa y la atención al usuario.",
+    "experiencia": [
+      {
+        "cargo": "Asistente Administrativo",
+        "empresa": "MUSEO NACIONAL DE ETNOGRAFÍA Y FOLKLORE",
+        "duracion": "13/04/2017 - 31/12/2017"
+      },
+      {
+        "cargo": "Asistente Administrativo",
+        "empresa": "MUSEO NACIONAL DE ETNOGRAFÍA Y FOLKLORE",
+        "duracion": "29/09/2016 - 31/12/2016"
+      },
+      {
+        "cargo": "Asistente Administrativo",
+        "empresa": "GOBIERNO AUTÓNOMO MUNICIPAL DE LA PAZ \"HOSPITAL MUNICIPAL LA MERCED\"",
+        "duracion": "01/03/2012 - 31/07/2013"
+      }
+    ],
+    "formacion": [
+      {
+        "titulo": "Ingeniería Comercial",
+        "institucion": "UNIVERSIDAD TECNOLÓGICA BOLIVIANA",
+        "ano": "2016"
+      },
+      {
+        "titulo": "Bachiller en Humanidades",
+        "institucion": "TÉCNICO HUMANÍSTICO \"FRANZ TAMAYO\"",
+        "ano": ""
+      }
+    ],
+    "cursos": [
+      "Aymara, CENTRO SOCIAL DE CAPACITACIÓN SUPERIOR",
+      "Formación Práctica de Cajeros Bancos y Entidades Financieras, CENTRO SOCIAL DE CAPACITACIÓN SUPERIOR",
+      "Oficiales de Crédito de Bancos y Entidades Financieras, CENTRO SOCIAL DE CAPACITACIÓN SUPERIOR",
+      "Contabilidad Básica, CENTRO SOCIAL DE CAPACITACIÓN SUPERIOR",
+      "Atención al Cliente, CENTRO SOCIAL DE CAPACITACIÓN SUPERIOR",
+      "Ley 1178 SAFCO, CENTRO SOCIAL DE CAPACITACIÓN SUPERIOR",
+      "Seminario Taller \"El nuevo debate y la oratoria, olvidando viejos paradigmas\", UNIVERSIDAD TECNOLÓGICA BOLIVIANA",
+      "Simposio Internacional \"Visión estratégica de negocios\". (La clave del éxito asiático), UNIVERSIDAD TECNOLÓGICA BOLIVIANA",
+      "Financiación, Cobros y Pagos Internacionales, UNIVERSIDAD TECNOLÓGICA BOLIVIANA",
+      "Desarrolla tu agilidad mental, UNIVERSIDAD TECNOLÓGICA BOLIVIANA",
+      "Internacionalización Empresarial, UNIVERSIDAD TECNOLÓGICA BOLIVIANA",
+      "Congreso Nacional de la Sociedad de Ingenieros de Bolivia, COLEGIO DE INGENIEROS COMERCIAL (COCHABAMBA)"
+    ],
+    "habilidades": [],
+    "cv_pdf": "#",
+    "estado": "activo",
+    "fecha_registro": new Date().toISOString()
+  },
+  {
+    "id": "dennys-guillermo-paz-rivera",
+    "nombre": "Dennys Guillermo",
+    "apellido": "Paz Rivera",
+    "foto": "/dennysguillermopazrivera_rostro.jpg",
+    "portada": "/dennysguillermopazrivera_portada_web.jpg",
+    "profesion": "Comunicador Social",
+    "paisId": "1",
+    "areaId": "12",
+    "ciudadId": "3",
+    "telefono": "+591 70963720",
+    "email": "dennyspazsc@gmail.com",
+    "descripcion": "Profesional con amplia experiencia en seguridad aeroportuaria y atención al cliente, desempeñando funciones en control de equipaje y pasajeros mediante sistemas de inspección por rayos X, garantizando el cumplimiento de normas de seguridad y procedimientos operativos. Experiencia en áreas de servicio, logística e importación y exportación, con formación en normativa pública, políticas públicas y responsabilidad por la función pública. Me caracterizo por mi responsabilidad, disciplina, capacidad de observación y orientación al servicio, comprometido con la seguridad, el orden y la atención eficiente al usuario.",
+    "experiencia": [
+      {
+        "cargo": "Cajero y Atención al Cliente",
+        "empresa": "Hipermaxi",
+        "duracion": "1995 - 1996"
+      },
+      {
+        "cargo": "Compaginador e impresión de material",
+        "empresa": "Imprenta El País",
+        "duracion": "1997 - 1998"
+      },
+      {
+        "cargo": "Importador y Exportador",
+        "empresa": "Trans del Oriente",
+        "duracion": "2000 - 2005"
+      },
+      {
+        "cargo": "Atención al Cliente",
+        "empresa": "Restaurante Toborochi",
+        "duracion": "2006 - 2007"
+      },
+      {
+        "cargo": "Seguridad aeronáutica",
+        "empresa": "Asfade integral",
+        "duracion": "2008 - 2010"
+      },
+      {
+        "cargo": "Seguridad Aeroportuaria Sección Rayos X",
+        "empresa": "Sabsa",
+        "duracion": "2020 - 2022"
+      },
+      {
+        "cargo": "Seguridad Aeroportuaria Sección Rayos X",
+        "empresa": "Naabol",
+        "duracion": "2022 - 2025"
+      }
+    ],
+    "formacion": [
+      {
+        "titulo": "Comunicación Social",
+        "institucion": "Universidad Autónoma Gabriel René Moreno",
+        "ano": "Egresado"
+      },
+      {
+        "titulo": "Bachiller en Humanidades",
+        "institucion": "Colegio Roberto Alvarado Daza",
+        "ano": "1988"
+      }
+    ],
+    "cursos": [],
+    "habilidades": [
+      "Word",
+      "Excel",
+      "Power Point",
+      "AutoCad"
+    ],
+    "cv_pdf": "#",
+    "estado": "activo",
+    "fecha_registro": new Date().toISOString()
+  },
+  {
+    "id": "dimelsa-melissa-quiroga-poma",
+    "nombre": "Dimelsa Melissa",
+    "apellido": "Quiroga Poma",
+    "foto": "/dimelsamelissaquirogapoma_rostro.jpg",
+    "portada": "/dimelsamelissaquirogapoma_portada_web.jpg",
+    "profesion": "Trabajo Social",
+    "paisId": "1",
+    "areaId": "16",
+    "ciudadId": "4",
+    "telefono": "+591 76159662",
+    "email": "quirogamelissa1993@gmail.com",
+    "descripcion": "Profesional en el área de Trabajo Social con experiencia en apoyo de gabinete y acompañamiento socioeducativo en instituciones educativas y universitarias, brindando orientación y seguimiento a estudiantes en contextos sociales y comunitarios. Cuento con formación técnica en electricidad y automatización industrial, lo que fortalece mi capacidad para el trabajo operativo y resolución de problemas. Me caracterizo por mi responsabilidad, vocación de servicio, trabajo en equipo y adaptación a diferentes entornos laborales. Tengo disposición para realizar trabajo de campo y apoyo en proyectos sociales y comunitarios.",
+    "experiencia": [
+      {
+        "cargo": "Apoyo de Gabinete Trabajadora social",
+        "empresa": "UTO departamento de asuntos estudiantes",
+        "duracion": "2025"
+      },
+      {
+        "cargo": "Apoyo de Gabinete Trajadora Social",
+        "empresa": "Unidad Educativa Llallagua",
+        "duracion": "2024"
+      },
+      {
+        "cargo": "Apoyo de Gabinete Trajadora Social",
+        "empresa": "Unidad Educativa Eduardo Avaroa",
+        "duracion": "2023"
+      },
+      {
+        "cargo": "Técnico electricista",
+        "empresa": "Empresa Metalúrgica Vinto",
+        "duracion": "2020 - 2021"
+      },
+      {
+        "cargo": "Servicios Mantenimiento Eléctrico",
+        "empresa": "Comibol",
+        "duracion": "2019 - 2020"
+      }
+    ],
+    "formacion": [
+      {
+        "titulo": "Trabajo Social",
+        "institucion": "Universidad Autónoma Tomás Frías",
+        "ano": "2025"
+      },
+      {
+        "titulo": "Técnico Superior Automatización Industrial",
+        "institucion": "Instituto Tecnológico IAI",
+        "ano": "2020"
+      },
+      {
+        "titulo": "Técnico Auxiliar Electricidad Industrial",
+        "institucion": "Centro de Educación Alternativa Simón Bolívar",
+        "ano": "2019"
+      },
+      {
+        "titulo": "Técnico Medio en Gestión Administrativa",
+        "institucion": "Escuela Profesional de la Sagrada Familia Málaga - España",
+        "ano": "2014"
+      },
+      {
+        "titulo": "Bachiller en Humanidades",
+        "institucion": "Instituto de Educación Secundaria EL PALO de Málaga – España",
+        "ano": "2011"
+      }
+    ],
+    "cursos": [
+      "Capacitación para AUXILIARES DE DOCENCIA, 10 al 13 de febrero del 2025",
+      "Capacitación en la ELABORACIÓN DE PERFILES DE INVESTIGACIÓN PARA AUXILIARES DE INVESTIGACIÓN, 07 de febrero del 2025",
+      "DIVORCIO, GUARDA, TUTELA, Junio del 2024",
+      "PROCESO DE DIVORCIO EN EL AMBITO NOTARIAL Y JUDICIAL, 10, 11, 12 de mayo de 2024",
+      "Proceso Oral Agrario en Bolivia, 10, 11, 12 de mayo del 2024",
+      "MEDIOS DE IMPUGNACIÓN O RECURSOS EN MATERIAL CIVIL EN BOLIVIA, 10, 11, 12 de mayo del 2024",
+      "DERECHOS HUMANOS Y ACESSO A LA JUSTICIA, 10, 11, 12 de mayo del 2024",
+      "IBEROAMERICANO DE EDUCACIÓN SOCIEDAD Y TECNOLOGÍA, 24, 25, 26 de abril del 2024",
+      "Capacitación para AUXILIARES DE DOCENCIA, 29 al 31 de enero del 2024",
+      "Capacitación ''NEURO ORATORIA'', Enero del 2024",
+      "TRABAJO SOCIAL E INSTRUMENTOS DE INTERVENCIÓN MICROSOCIAL, 07 de noviembre del 2023",
+      "PROGRAMA EDUCATIVO CONTRA EL CONSUMO DE ALCOHOL Y CONTRA LA VIOLENCIA-DARE, Noviembre del 2003",
+      "REACCIÓN CIENTÍFICA Y EL USO DE LAS NORMAS APA 7MA, Octubre del 2023",
+      "DERECHOS HUMANOS Y POBLACIONES EN SITUACIONES DE VUNERABILIDAD, 6, 7, 8, 9 de octubre del 2023",
+      "ASISTENCIA FAMILIAR A FAVOR DE LOS FAMILIARES CON DISCAPACIDAD, 6, 7, 8, 9 de octubre del 2023",
+      "LOS ORGANISMOS ELECTORALES Y EL ESTADO DE LA DEMOCRACIA EN AMÉRICA LATINA, 6, 7, 8, 9 de octubre del 2023",
+      "ANÁLISIS DEL TIPO PENAL 'DELITO CONTRA LA VIDA Y LA INTEGRIDAD CORPORAL', 6, 7, 8, 9 de octubre del 2023",
+      "INTELIGENCIA ARTIFICIAL - CHAT GPT APLICADA A LA INVESTIGACIÓN Y EDUCACIÓN, 13 de septiembre del 2023",
+      "METODOLOGÍA DE LA MOCHILADA AIDA, Septiembre del 2023",
+      "NUEVOS DESAFÍOS DE INTERVENCIÓN EN TRABAJO SOCIAL, Junio del 2023",
+      "Capacitación para AUXILIARES DE DOCENCIA, 29 al 31 de marzo del 2023",
+      "SOCIALIZACIÓN DE LA LEY SAFCO 1178 ADMINISTRACIÓN Y CONTROL GUBERNAMENTAL, 16, 17 de marzo del 2023",
+      "CIENTÍFICO Y TÉCNICA DE MUESTREO EN INTERVENCIÓN CUANTITATIVA, 8 de noviembre del 2022",
+      "Taller REDACCIÓN CIENTÍFICA Y MANEJO DE NORMAS APA, 29, 30 de junio del 2022"
+    ],
+    "habilidades": [
+      "Castellano - Nativo",
+      "Quechua - Intermedio",
+      "Inglés - Básico",
+      "Profesional categoría A. para 10 pasajeros",
+      "Profesional categoría M. Motocicleta, Triciclos, Cuadriciclos"
+    ],
+    "cv_pdf": "#",
+    "estado": "activo",
+    "fecha_registro": new Date().toISOString()
+  },
+  {
+    "id": "eddy-favio-quispe-condori",
+    "nombre": "Eddy Favio",
+    "apellido": "Quispe Condori",
+    "foto": "/eddyfavioquispecondori_rostro.jpg",
+    "portada": "/eddyfavioquispecondori_portada_web.jpg",
+    "profesion": "Lic. Comercio Internacional",
+    "paisId": "1",
+    "areaId": "9",
+    "ciudadId": "1",
+    "telefono": "+591 77574032",
+    "email": "faviocondori2025@outlook.com",
+    "descripcion": "Egresado de la carrera de Comercio Internacional con experiencia en gestiones administrativas y operativas en agencia despachante de aduanas. Con conocimientos en procesos de archivo, trámites aduaneros y logística vinculada al comercio exterior. Participación en seminarios y talleres sobre comercio internacional y relaciones comerciales. Manejo intermedio de herramientas Microsoft Office. Me caracterizo por mi responsabilidad, orientación al detalle, capacidad de comunicación y resolución de problemas, con interés en desarrollarme profesionalmente en el área de comercio exterior, logística y operaciones aduaneras.",
+    "experiencia": [
+      {
+        "cargo": "Gestoría",
+        "empresa": "LOGADEX SRL Agencia Despachante de Aduanas",
+        "duracion": "2025"
+      },
+      {
+        "cargo": "Archivo",
+        "empresa": "LOGADEX SRL Agencia Despachante de Aduanas",
+        "duracion": "2024"
+      },
+      {
+        "cargo": "Pasantía",
+        "empresa": "LOGADEX SRL Agencia Despachante de Aduanas",
+        "duracion": "2024"
+      }
+    ],
+    "formacion": [
+      {
+        "titulo": "Licenciatura en Comercio Internacional (Egresado)",
+        "institucion": "Universidad Tecnológica Boliviana",
+        "ano": "2020"
+      },
+      {
+        "titulo": "Bachiller en Humanidades",
+        "institucion": "Colegio Mixto Topater",
+        "ano": "2012"
+      }
+    ],
+    "cursos": [
+      "Seminario - El Comercio Internacional de Bolivia - Desarollo y Perspectivas, 25 / 11 / 2025",
+      "Simposio - Los Nuevos Desafíos del Comercio Internacional, 12 / 04 / 2016",
+      "Simposio - Relaciones Comerciales entre Bolivia y China, 07 / 04 / 2015",
+      "Simposio - Actualidad y Perspectiva del Comercio Exterior, 01 / 07 / 2014",
+      "Taller - Operativa y Logística Portuaria en Iquique, Chile, 21 - 24 / 11 / 2013",
+      "Primera semana de las carreras de Ingeniería Comercial y Comercio Internacional, 18 / 11 / 2013"
+    ],
+    "habilidades": [
+      "MS Word Internedio",
+      "MS Excel Internedio",
+      "MS PowerPoint Internedio",
+      "Comunicación: Habilidad para expresar ideas de manera clara y persuasiva",
+      "Resolución de problemas: Habilidad para identificar y resolver problemas de manera eficiente, utilizando un enfoque analítico y creativo",
+      "Orientación al detalle: Atención meticulosa a los detalles en todas las tareas y proyectos"
+    ],
+    "cv_pdf": "#",
+    "estado": "activo",
+    "fecha_registro": new Date().toISOString()
+  },
+  {
+    "id": "edson-norbin-hualampa-arequipa",
+    "nombre": "Edson Norbin",
+    "apellido": "Hualampa Arequipa",
+    "foto": "/edsonnorbinhualampaarequipa_rostro.jpg",
+    "portada": "/edsonnorbinhualampaarequipa_pagina_web.jpg",
+    "profesion": "Electromecánico Industrial",
+    "paisId": "1",
+    "areaId": "17",
+    "ciudadId": "3",
+    "telefono": "+591 75063035",
+    "email": "hualampa2509@gmail.com",
+    "descripcion": "Profesional Técnico Superior en Electromecánica Industrial con amplia experiencia en operaciones industriales, gestión de almacenes y mantenimiento eléctrico domiciliario e industrial. Cuento con amplia trayectoria en el sector manufacturero y textil, desempeñándome durante varios años como operario de planta y posteriormente como encargado de almacén de repuestos, fortaleciendo competencias en control logístico, administración de inventarios y coordinación operativa. Poseo conocimientos en instalaciones eléctricas, electromecánica industrial y automotriz, así como capacitación en logística y gestión de almacenes. Destaco por su responsabilidad, compromiso, capacidad de organización y orientación al trabajo eficiente, adaptándome a entornos industriales y técnicos de alta exigencia.",
+    "experiencia": [
+      {
+        "cargo": "Electricista domiciliario e industrial",
+        "empresa": "INDEPENDIENTE PARTICULAR",
+        "duracion": "2026 Actualmente"
+      },
+      {
+        "cargo": "Encargado de Almacén de Repuestos",
+        "empresa": "TEXTILES INDUSTRIALES SANTA CRUZ LTDA.",
+        "duracion": "Junio 2018 – Mayo 2026"
+      },
+      {
+        "cargo": "Operario de Planta",
+        "empresa": "TEXTILES INDUSTRIALES SANTA CRUZ LTDA.",
+        "duracion": "Junio 2007 – Junio 2018"
+      }
+    ],
+    "formacion": [
+      {
+        "titulo": "Electromecánica Industrial (Técnico Superior)",
+        "institucion": "Fundación Infocal Santa Cruz",
+        "ano": "Gestión 2017"
+      },
+      {
+        "titulo": "Bachiller en Humanidades",
+        "institucion": "Unidad Educativa Elvira Parada “C”",
+        "ano": "Gestión 2008"
+      }
+    ],
+    "cursos": [
+      "Iluminación inteligente y eficiente en edificaciones, Colegio de Ingenieros Electricistas y Electrónicos de Santa Cruz, Junio 2015",
+      "Logística y gestión de almacenes, INEGAS (UAGRM), 21 de enero – 04 de febrero 2019",
+      "Electromecánica industrial automotriz, Centro de Capacitación Técnica Privada AVAROA, 2026",
+      "Logística y gestión de almacenes, INEGAS (UAGRM), 12 de diciembre 2018",
+      "Simposio de soluciones eléctricas de baja tensión, INFOCAL SANTA CRUZ, 10 de mayo 2016"
+    ],
+    "habilidades": [],
+    "cv_pdf": "#",
+    "estado": "activo",
+    "fecha_registro": new Date().toISOString()
+  },
+  {
+    "id": "fabricio-eduardo-padilla-munguia",
+    "nombre": "Fabricio Eduardo",
+    "apellido": "Padilla Munguia",
+    "foto": "/fabricioeduardopadillamunguia_rostro.jpg",
+    "portada": "/fabricioeduardopadillamunguia_portada_web.jpg",
+    "profesion": "Egresado de Contabilidad",
+    "paisId": "1",
+    "areaId": "11",
+    "ciudadId": "1",
+    "telefono": "+591 79505790",
+    "email": "fabriciopadilla79@gmail.com",
+    "descripcion": "Profesional con experiencia en gestión administrativa, ventas y logística en el sector farmacéutico y comercial. Con conocimientos en atención al cliente, seguimiento de cuentas por cobrar, coordinación de entregas, elaboración de cotizaciones y trámites institucionales ante AGEMED, Ministerio de Salud, Ministerio de Trabajo, AFP y CNS. Experiencia en control de almacenes y manejo del Sistema Administrativo Integrado (SAI). Egresado de Contabilidad, orientado a la organización, cumplimiento de procesos y fortalecimiento de relaciones comerciales con instituciones públicas y privadas.",
+    "experiencia": [
+      {
+        "cargo": "Apoyo en cuentas especiales",
+        "empresa": "LABORATORIOS IFA S.A.",
+        "duracion": "2021 - 2024"
+      },
+      {
+        "cargo": "Vendedor de medicamentos",
+        "empresa": "LEXFARMA",
+        "duracion": "2020"
+      },
+      {
+        "cargo": "Área de almacenes",
+        "empresa": "JEB TECNOLOGÍA SRL",
+        "duracion": "2018 - 2020"
+      },
+      {
+        "cargo": "Auxiliar de oficina",
+        "empresa": "IMPORTADORA DISMEDIN",
+        "duracion": "2014 - 2018"
+      },
+      {
+        "cargo": "Encargado de almacenes",
+        "empresa": "BLONDEL S.A.",
+        "duracion": "2012 - 2013"
+      }
+    ],
+    "formacion": [],
+    "cursos": [],
+    "habilidades": [
+      "Trámites en Notaria de Gobierno",
+      "Atención al cliente",
+      "Elaboración de cotizaciones",
+      "Coordinación de entregas",
+      "Seguimiento de Cuentas por Cobrar",
+      "Trámites en AGEMED",
+      "Manejo del Sistema Administrativo Integrado (SAI)"
+    ],
+    "cv_pdf": "#",
+    "estado": "activo",
+    "fecha_registro": new Date().toISOString()
+  },
+  {
+    "id": "fausto-leandro-villanueva",
+    "nombre": "Fausto",
+    "apellido": "Leandro Villanueva",
+    "foto": "/faustoleandrovillanueva_rostro.jpg",
+    "portada": "/faustoleandrovillanueva_portada_web.jpg",
+    "profesion": "Administración de Empresas",
+    "paisId": "1",
+    "areaId": "4",
+    "ciudadId": "5",
+    "telefono": "+591 68388530",
+    "email": "faustoleandro155@gmail.com",
+    "descripcion": "Estudio la carrera Administración de Empresas en la Universidad Autónoma “Tomás Frías” y me encuentro en la etapa final de mi educación académica. He participado activamente en diversos congresos y cursos de actualización. Cuento con conocimiento en Gestión de Recursos Humanos, Inteligencia Artificial, Evaluación y Riesgos Financieros, Contabilidad Financiera, Liderazgo, Neuromarketing, Emprendimiento y Demografía Empresarial. También asistí al Foro de Crisis de la Administración Pública y Pacto Fiscal. Estas experiencias me han dotado de una visión integral y actualizada del mundo empresarial, y me han ayudado en la preparación para enfrentar los desafíos del mercado laboral con una sólida base teórica y práctica.",
+    "experiencia": [],
+    "formacion": [
+      {
+        "titulo": "Licenciatura en Administración de Empresas",
+        "institucion": "Universidad Autónoma Tomás Frias",
+        "ano": "Cursando actualmente 2026"
+      },
+      {
+        "titulo": "Bachiller en Humanidades",
+        "institucion": "Colegio Nacional Fray Segio Castelly de Totora",
+        "ano": ""
+      }
+    ],
+    "cursos": [
+      "Gestión de Recursos Humanos por Competencia",
+      "Evaluación de Riesgos Financieros",
+      "Contabilidad Petrolera",
+      "Inteligencia Artificial y sus aplicaciones",
+      "Metodología de la Investigación",
+      "Emprendimiento (Creación de Empresas)",
+      "Crisis en la Administración Pública del Estado Plurinacional de Bolivia y Pacto Fiscal",
+      "Transformando dificultades en oportunidades",
+      "Las mil y una idea que hicieron historia en el management y los negocios",
+      "Educación Financiera de Banco FIE “Despega”"
+    ],
+    "habilidades": [
+      "Responsabilidad",
+      "Aprendizaje continuo",
+      "Motivación",
+      "Compromiso",
+      "Español nativo"
+    ],
+    "cv_pdf": "#",
+    "estado": "activo",
+    "fecha_registro": new Date().toISOString()
+  },
+  {
+    "id": "franklin-portugal-camacho",
+    "nombre": "Franklin",
+    "apellido": "Portugal Camacho",
+    "foto": "/franklinportugalcamacho_rostro.jpg",
+    "portada": "/franklinportugalcamacho_portada_web.jpg",
+    "profesion": "Administración de Empresas",
+    "paisId": "1",
+    "areaId": "4",
+    "ciudadId": "5",
+    "telefono": "+591 71534004",
+    "email": "portugal.franklin@gmail.com",
+    "descripcion": "Profesional con sólida trayectoria en dirección administrativa y financiera en instituciones públicas, organismos internacionales y entidades estatales. Experto en gestión estratégica, planificación institucional, administración financiera, control gubernamental y ejecución de programas y proyectos. Amplia experiencia en liderazgo de equipos, formulación y seguimiento presupuestario, cumplimiento de normativa pública (Ley 1178 SAFCO) y coordinación interinstitucional. Con formación de posgrado y maestría en administración de empresas, orientado a resultados, transparencia institucional y fortalecimiento de la gestión pública.",
+    "experiencia": [
+      {
+        "cargo": "Director Administrativo Financiero",
+        "empresa": "AUTORIDAD JURISDICCIONAL ADMINISTRATIVA MINERA - AJAM",
+        "duracion": "Mar 2023 a Jul 2025"
+      },
+      {
+        "cargo": "Director Nacional Administrativo, Financiero y Comercial",
+        "empresa": "ADMINISTRACIÓN DE AEROPUERTOS Y SERVICIOS AUXILIARES A LA NAVEGACIÓN AEREA – A.A.S.A.N.A.",
+        "duracion": "Sep 2017 a Mar 2019"
+      },
+      {
+        "cargo": "Director General Ejecutivo - MAE",
+        "empresa": "ADMINISTRACIÓN DE AEROPUERTOS Y SERVICIOS AUXILIARES A LA NAVEGACIÓN AÉREA – A.A.S.A.N.A.",
+        "duracion": "Mar 2019 a Nov 2019"
+      },
+      {
+        "cargo": "Director General de Asuntos Administrativos",
+        "empresa": "PROCURADURIA GENERAL DEL ESTADO - PGE",
+        "duracion": "Dic 2014 a Ene 2016"
+      }
+    ],
+    "formacion": [
+      {
+        "titulo": "Magister en Administración de Empresas",
+        "institucion": "Universidad de Chile. Santiago de Chile",
+        "ano": "Jun 1992"
+      },
+      {
+        "titulo": "Licenciado en Administración de Empresas",
+        "institucion": "Universidad Mayor de San Andrés - UMSA",
+        "ano": "Sep 1988"
+      },
+      {
+        "titulo": "Contador General",
+        "institucion": "Instituto de Educación Bancaria y el Comité Ejecutivo - Universidad Boliviana",
+        "ano": "Nov 1982"
+      }
+    ],
+    "cursos": [
+      "Diplomado Internacional a la Excelencia en “Gestión y Administración Pública”",
+      "Certificado Internacional en Gestión y Administración Pública",
+      "CONTABILIDAD BÁSICA BANCARIA, realizado en el B.C.B.",
+      "PLANIFICACIÓN ECONÓMICA, realizado en el I.S.A.P.",
+      "PREPARACIÓN Y EVALUACIÓN DE PROYECTOS, realizado en el I.S.A.P."
+    ],
+    "habilidades": [
+      "Gestión estratégica",
+      "Planificación institucional",
+      "Administración financiera",
+      "Control gubernamental",
+      "Liderazgo de equipos"
+    ],
+    "cv_pdf": "#",
+    "estado": "activo",
+    "fecha_registro": new Date().toISOString()
+  },
+  {
+    "id": "gadiel-wilbor-capriles-quiroz",
+    "nombre": "Gadiel Wilbor",
+    "apellido": "Capriles Quiroz",
+    "foto": "/gadielwilborcaprilesquiroz_rostro.jpg",
+    "portada": "/gadielwilborcaprilesquiroz_portada_web.jpg",
     "profesion": "Ingeniero Civil",
     "paisId": "1",
     "areaId": "5",
-    "ciudadId": "1",
-    "telefono": "+591 76139007",
-    "email": "gabriel.delgado36@email.com",
-    "descripcion": "Profesional comprometido con la excelencia. Amplia experiencia en Ingeniero Civil. Dispuesto a aportar soluciones efectivas y trabajar en equipo.",
-    "experiencia": [
-      {
-        "cargo": "Especialista en Ingeniero Civil",
-        "empresa": "Empresa Líder S.A.",
-        "duracion": "2019 - Presente"
-      },
-      {
-        "cargo": "Asistente / Junior",
-        "empresa": "Consultora Nacional",
-        "duracion": "2016 - 2019"
-      }
-    ],
-    "formacion": [
-      {
-        "titulo": "Licenciatura / Técnico en Ingeniero Civil",
-        "institucion": "Universidad / Instituto Reconocido",
-        "ano": "2016"
-      }
-    ],
-    "cursos": [
-      "Actualización profesional",
-      "Herramientas digitales"
-    ],
-    "habilidades": [
-      "Trabajo en equipo",
-      "Resolución de problemas",
-      "Liderazgo",
-      "Comunicación efectiva"
-    ],
-    "cv_pdf": "#",
-    "estado": "activo",
-    "fecha_registro": "2026-05-20T03:46:59.137Z"
-  },
-  {
-    "id": "helena-delgado-37",
-    "nombre": "Helena",
-    "apellido": "Delgado",
-    "foto": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=600",
-    "profesion": "Docente Universitaria",
-    "paisId": "1",
-    "areaId": "6",
-    "ciudadId": "2",
-    "telefono": "+591 78311241",
-    "email": "helena.delgado37@email.com",
-    "descripcion": "Profesional comprometido con la excelencia. Amplia experiencia en Docente Universitario. Dispuesto a aportar soluciones efectivas y trabajar en equipo.",
-    "experiencia": [
-      {
-        "cargo": "Especialista en Docente Universitario",
-        "empresa": "Empresa Líder S.A.",
-        "duracion": "2019 - Presente"
-      },
-      {
-        "cargo": "Asistente / Junior",
-        "empresa": "Consultora Nacional",
-        "duracion": "2016 - 2019"
-      }
-    ],
-    "formacion": [
-      {
-        "titulo": "Licenciatura / Técnico en Docente Universitario",
-        "institucion": "Universidad / Instituto Reconocido",
-        "ano": "2016"
-      }
-    ],
-    "cursos": [
-      "Actualización profesional",
-      "Herramientas digitales"
-    ],
-    "habilidades": [
-      "Trabajo en equipo",
-      "Resolución de problemas",
-      "Liderazgo",
-      "Comunicación efectiva"
-    ],
-    "cv_pdf": "#",
-    "estado": "activo",
-    "fecha_registro": "2026-05-20T03:46:59.137Z"
-  },
-  {
-    "id": "ignacio-delgado-38",
-    "nombre": "Ignacio",
-    "apellido": "Delgado",
-    "foto": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=600",
-    "profesion": "Ingeniero DevOps",
-    "paisId": "1",
-    "areaId": "7",
     "ciudadId": "3",
-    "telefono": "+591 74554737",
-    "email": "ignacio.delgado38@email.com",
-    "descripcion": "Profesional comprometido con la excelencia. Amplia experiencia en Ingeniero DevOps. Dispuesto a aportar soluciones efectivas y trabajar en equipo.",
+    "telefono": "+591 67465130",
+    "email": "gadiel.capriles@gmail.com",
+    "descripcion": "Ingeniero Civil con amplia experiencia en control de calidad, ingeniería geotécnica y supervisión de obras civiles en proyectos de infraestructura, energía, hidrocarburos y transporte. Especialista en estudios geotécnicos, mecánica de suelos, pavimentos y control de laboratorio. Experiencia en gestión técnica de proyectos, aseguramiento de calidad, monitoreo SMS y elaboración de informes técnicos. Formación de posgrado en gerencia de la construcción y pavimentos. Orientado a cumplimiento normativo, optimización de procesos y ejecución eficiente de proyectos de gran envergadura.",
     "experiencia": [
       {
-        "cargo": "Especialista en Ingeniero DevOps",
-        "empresa": "Empresa Líder S.A.",
-        "duracion": "2019 - Presente"
+        "cargo": "Especialista en Control de Calidad",
+        "empresa": "CHINA STATE CONSTRUCTION ENGRG. CORP. LTD",
+        "duracion": "Ene 2020 - Mar 2026"
       },
       {
-        "cargo": "Asistente / Junior",
-        "empresa": "Consultora Nacional",
-        "duracion": "2016 - 2019"
+        "cargo": "Especialista en Control de Calidad",
+        "empresa": "CHINA HARZONE INDUSTRY CORP. LTD",
+        "duracion": "Oct 2015 - Dic 2019"
+      },
+      {
+        "cargo": "Encargado de Sitio / Ingeniero Geotecnista / Monitor SMS",
+        "empresa": "INGENIERÍA DE SUELOS Ingenieros Consultores en Fundaciones y Pilotaje",
+        "duracion": "Dic 2006 - Sep 2015"
+      },
+      {
+        "cargo": "Ingeniero Júnior en Laboratorio de Suelos y Hormigones",
+        "empresa": "CONSA SRL Consultores Asociados",
+        "duracion": "Sep - Nov 2006"
       }
     ],
     "formacion": [
       {
-        "titulo": "Licenciatura / Técnico en Ingeniero DevOps",
-        "institucion": "Universidad / Instituto Reconocido",
+        "titulo": "DIPLOMADO EN GERENCIA DE LA CONSTRUCCIÓN",
+        "institucion": "Universidad del Valle",
+        "ano": "2024"
+      },
+      {
+        "titulo": "DIPLOMADO EN INGENIERÍA DE PAVIMENTOS",
+        "institucion": "Universidad Autónoma del Beni “José Ballivián”",
+        "ano": "2017"
+      },
+      {
+        "titulo": "DIPLOMADO EN PROYECTOS DE INGENIERÍA GEOTÉCNICA",
+        "institucion": "Universidad San Sebastián de Chile",
         "ano": "2016"
+      },
+      {
+        "titulo": "DIPLOMADO EN GEOTECNIA APLICADA",
+        "institucion": "Universidad Autónoma del Beni “José Ballivián”",
+        "ano": "2016"
+      },
+      {
+        "titulo": "LICENCIADO EN INGENIERÍA CIVIL",
+        "institucion": "Universidad Mayor de San Simón",
+        "ano": "2007"
       }
     ],
     "cursos": [
-      "Actualización profesional",
-      "Herramientas digitales"
+      "Curso Construcción y Rehabilitación de Pavimentos Rígidos",
+      "Elaboración e Interpretación de Informes Técnicos de Ensayos SPT",
+      "Tercer Taller Nacional de Laboratorio de Mecánica de Suelos",
+      "Seminario “Patología de Pavimentos Flexibles, Causas y soluciones”",
+      "Curso Patologías en Estructuras de Hormigón Armado"
     ],
     "habilidades": [
-      "Trabajo en equipo",
-      "Resolución de problemas",
-      "Liderazgo",
-      "Comunicación efectiva"
+      "Control de calidad",
+      "Ingeniería geotécnica",
+      "Supervisión de obras civiles",
+      "Mecánica de suelos",
+      "Gerencia de la construcción"
     ],
     "cv_pdf": "#",
     "estado": "activo",
-    "fecha_registro": "2026-05-20T03:46:59.137Z"
+    "fecha_registro": new Date().toISOString()
   },
   {
-    "id": "julia-delgado-39",
-    "nombre": "Julia",
-    "apellido": "Delgado",
-    "foto": "https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&q=80&w=600",
-    "profesion": "Chapista",
+    "id": "gary-gutierrez-saucedo",
+    "nombre": "Gary",
+    "apellido": "Gutierrez Saucedo",
+    "foto": "/garygutierrezsaucedo_rostro.jpg",
+    "portada": "/garygutierrezsaucedo_portada_web.jpg",
+    "profesion": "Administrador de Empresas",
     "paisId": "1",
-    "areaId": "8",
-    "ciudadId": "4",
-    "telefono": "+591 71049070",
-    "email": "julia.delgado39@email.com",
-    "descripcion": "Profesional comprometido con la excelencia. Amplia experiencia en Chapista. Dispuesto a aportar soluciones efectivas y trabajar en equipo.",
+    "areaId": "4",
+    "ciudadId": "3",
+    "telefono": "+591 63316329",
+    "email": "garigutier@gmail.com",
+    "descripcion": "Egresado de la carrera de administración de empresas con 17 años de experiencia de trabajo en el área de Logistica y adquisiciones (2008-2025) en la actualidad gestionando requerimiento de diferentes área internas y externas, con amplia experiencia en interacción con personas, negociación y resolución de conflictos, trabajo orientado al cumplimiento de objetivos mediante indicadores.",
     "experiencia": [
       {
-        "cargo": "Especialista en Chapista",
-        "empresa": "Empresa Líder S.A.",
-        "duracion": "2019 - Presente"
+        "cargo": "Asistente de adquisiciones",
+        "empresa": "Dpto. Adquisiciones y Logistica Ingenio Azucarero Guabira SA.",
+        "duracion": "Desde 2008-2025"
       },
       {
-        "cargo": "Asistente / Junior",
-        "empresa": "Consultora Nacional",
-        "duracion": "2016 - 2019"
+        "cargo": "Auxiliar- Asistente",
+        "empresa": "Dpto. Adquisiciones y Logística a nivel Bolivia Ingenio Azucarero Guabirá S.A.",
+        "duracion": "Desde 2010-2023"
+      },
+      {
+        "cargo": "Auxiliar-Ayudante",
+        "empresa": "Dpro. de Almacén de materiales y Repuestos Ingenio Azucarero Guabirá S.A.",
+        "duracion": "Desde 2007-2010"
       }
     ],
     "formacion": [
       {
-        "titulo": "Licenciatura / Técnico en Chapista",
-        "institucion": "Universidad / Instituto Reconocido",
-        "ano": "2016"
+        "titulo": "Licenciatura en “Administracion de empresas”",
+        "institucion": "Universidad Nur",
+        "ano": "2021"
+      },
+      {
+        "titulo": "Bachiller en Humanidades",
+        "institucion": "Colegio Marceliano Montero",
+        "ano": "2003"
       }
     ],
     "cursos": [
-      "Actualización profesional",
-      "Herramientas digitales"
+      "Taller de excel nivel, básico, intermedio, avanzado",
+      "Taller Seminario Emprende Ya",
+      "Curso Gestión de Talento Humano",
+      "Curso Power BI Analisis de Datos e Inteligencia Empresarial",
+      "Seminario Taller, oficial de crédito financiero",
+      "Curso funciones avanzadas Excel",
+      "Curso manejo de tablas dinámicas avanzada en Excel",
+      "Curso de introducción a la economía",
+      "Curso evaluador de indicadores clave (KPI)",
+      "Curso Evaluador de procesos",
+      "Curso de Excel Express",
+      "Curso de capacitación, emprendedor empresarial",
+      "Cursos en Excel avanzado en la corporación educativa INGENIUM",
+      "Taller de Bancarización en transacción de compra y ventas superior a los 50,000 bolivianos"
     ],
     "habilidades": [
-      "Trabajo en equipo",
-      "Resolución de problemas",
+      "Honestidad",
+      "Comunicación Efectiva",
+      "Trabajo en Equipo",
+      "Resolución de Problemas",
+      "Gestión del Tiempo",
       "Liderazgo",
-      "Comunicación efectiva"
+      "Adaptabilidad al Cambio",
+      "Manejo de Sistema Informático, Oracle, SAP",
+      "Manejo de Plataforma Tributaria SIAT",
+      "Manejo de Power BI"
     ],
     "cv_pdf": "#",
     "estado": "activo",
-    "fecha_registro": "2026-05-20T03:46:59.137Z"
+    "fecha_registro": new Date().toISOString()
+  },
+  {
+    "id": "genaro-saavedra-suarez",
+    "nombre": "Genaro",
+    "apellido": "Saavedra Suárez",
+    "foto": "/genarosaavedrasuarez_rostro.jpg",
+    "portada": "/genarosaavedrasuarez_portada_web.jpg",
+    "profesion": "Auxiliar Contable",
+    "paisId": "1",
+    "areaId": "11",
+    "ciudadId": "3",
+    "telefono": "+591 72609416",
+    "email": "saavedrasuarezgenaro@gmail.com",
+    "descripcion": "Soy Auxiliar Contable con amplia experiencia en el área administrativa y financiera, desempeñando funciones en registro contable, manejo de documentación, control de cuentas, cobranzas y apoyo en procesos contables en empresas comerciales y entidades financieras. Con trayectoria laboral sostenida en el sector contable, destacando por mi responsabilidad, organización y manejo confidencial de la información. Capaz de trabajar con precisión en el control de registros, conciliaciones y gestión documental, contribuyendo a la correcta administración de recursos y cumplimiento de procedimientos contables. Profesional comprometido, proactivo y orientado a resultados, con habilidades para el trabajo en equipo y la eficiencia operativa en el área administrativa y contable.",
+    "experiencia": [
+      {
+        "cargo": "Auxiliar Contable",
+        "empresa": "Motores y Repuestos DIESEL SANTA CRUZ",
+        "duracion": "Abr 2016 - Ene 2025"
+      },
+      {
+        "cargo": "Auxiliar de Contabilidad",
+        "empresa": "Cooperativa \"El Buen Samaritano\"",
+        "duracion": "Jul 2003 - Dic 2015"
+      },
+      {
+        "cargo": "Departamento de Cobranza",
+        "empresa": "Créditos e Inversiones Personales ACCESO S.A. FFP",
+        "duracion": "May 1999 - May 2000"
+      },
+      {
+        "cargo": "Auxiliar Mensajero",
+        "empresa": "Importaciones - Representaciones SAFERMAR",
+        "duracion": "Ene 1998 - Dic 1998"
+      },
+      {
+        "cargo": "Vendedor",
+        "empresa": "Ferretería \"Saavedra\"",
+        "duracion": "Ene 1996 - May 1997"
+      },
+      {
+        "cargo": "Mensajero y Archivo",
+        "empresa": "Empresa Constructora \"Crismaco\"",
+        "duracion": "Mar 1995 - Jul 1995"
+      }
+    ],
+    "formacion": [
+      {
+        "titulo": "Auxiliar Contable",
+        "institucion": "Instituto Cumbre",
+        "ano": "1994"
+      },
+      {
+        "titulo": "Bachiller en Humanidades",
+        "institucion": "Colegio \"Noel Kempf Mercado\", Montero",
+        "ano": "1994"
+      }
+    ],
+    "cursos": [],
+    "habilidades": [
+      "Registro contable",
+      "Manejo de documentación",
+      "Control de cuentas",
+      "Cobranzas",
+      "Conciliaciones",
+      "Gestión documental",
+      "Trabajo en equipo"
+    ],
+    "cv_pdf": "#",
+    "estado": "activo",
+    "fecha_registro": new Date().toISOString()
+  },
+  {
+    "id": "giovanna-gutierrez-heredia",
+    "nombre": "Giovanna",
+    "apellido": "Gutierrez Heredia",
+    "foto": "/giovannagutierrezheredia_rostro.jpg",
+    "portada": "/giovannagutierrezheredia_portada_web.jpg",
+    "profesion": "Ingeniera Comercial",
+    "paisId": "1",
+    "areaId": "18",
+    "ciudadId": "2",
+    "telefono": "+591 65348684",
+    "email": "yovi.ita1113@gmail.com",
+    "descripcion": "Soy Ing. Comercial de profesión con experiencia laboral en banca y finanzas área operativa y de créditos con conocimiento en la venta de productos y servicios financieros con actitud de servicio. Cuento con experiencia en el negocio del sector de la construcción y en la Docencia en Institutos.",
+    "experiencia": [
+      {
+        "cargo": "Administrador y Ventas",
+        "empresa": "Ferretería (San Borja)",
+        "duracion": "Mayo 2021 - Diciembre 2025"
+      },
+      {
+        "cargo": "Docente",
+        "empresa": "Instituto Tecnico (San Borja)",
+        "duracion": "Febrero 2019 - Noviembre 2025"
+      },
+      {
+        "cargo": "Asesor Comercial",
+        "empresa": "Banco Prodem S.A. (San Borja)",
+        "duracion": "Marzo 2017 - Noviembre 2020"
+      },
+      {
+        "cargo": "Cajero",
+        "empresa": "Banco Prodem S.A. (Cochabamba)",
+        "duracion": "Mayo 2014 - Abril 2016"
+      }
+    ],
+    "formacion": [
+      {
+        "titulo": "Diseño de Interiores y Mobiliario (Diplomado)",
+        "institucion": "Universidad Autónoma Gabriel René Moreno (UAGRM)",
+        "ano": "Mayo 2023 - Noviembre 2023"
+      },
+      {
+        "titulo": "Educación Superior por Competencias (Diplomado)",
+        "institucion": "Universidad Privada de Ciencias Administrativas y Tecnológicas (UCATEC)",
+        "ano": "Octubre 2021 - Octubre 2022"
+      },
+      {
+        "titulo": "Ingenieria Comerical (Licenciatura)",
+        "institucion": "Escuela Militar de Ingeniería (EMI)",
+        "ano": "Febrero 2004 - Noviembre 2008"
+      },
+      {
+        "titulo": "Dirección en Marketing y Ventas (Diplomado)",
+        "institucion": "Universidad Privada de Ciencias Administrativas y Tecnológicas (UCATEC)",
+        "ano": "Mayo 2004 - Octubre 2004"
+      },
+      {
+        "titulo": "Bachiller en Humanidades",
+        "institucion": "Colegio Vida Abundante",
+        "ano": "Febrero 1992 - Noviembre 2003"
+      }
+    ],
+    "cursos": [],
+    "habilidades": [
+      "Paquete Microsoft Office (Medio)",
+      "Canva (Básico)",
+      "Manejo de Efectivo y Billetaje (Avanzado)",
+      "Atención al Cliente y Cajera (Avanzado)",
+      "Enseñanza a Jóvenes (Medio)",
+      "Armado de Crédito (Avanzado)"
+    ],
+    "cv_pdf": "#",
+    "estado": "activo",
+    "fecha_registro": new Date().toISOString()
   }
 ];
-
