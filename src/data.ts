@@ -50,7 +50,7 @@ export const roles: Rol[] = [
 export const personas: Persona[] = [
   {
     "id": "jessica-ventas-0",
-    "nombre": "Jesica",
+    "nombre": "Jessica",
     "apellido": "Gaspar",
     "foto": "/jessicagaspar.jpg",
     "portada": "/portada_web_jessicagaspar.jpg",
@@ -230,7 +230,7 @@ export const personas: Persona[] = [
   },
   {
     "id": "daniela-alvarez-3",
-    "nombre": "Jhossel",
+    "nombre": "Jhosel",
     "apellido": "Patiño Reinaga",
     "foto": "/jhosselpatinoreinaga.jpg",
     "portada": "/portada_web_jhosselpatinoreinaga.jpg",
