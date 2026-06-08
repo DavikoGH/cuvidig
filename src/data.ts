@@ -50,7 +50,7 @@ export const roles: Rol[] = [
 export const personas: Persona[] = [
   {
     "id": "jessica-ventas-0",
-    "nombre": "Jessica",
+    "nombre": "Jesica",
     "apellido": "Gaspar",
     "foto": "/jessicagaspar.jpg",
     "portada": "/portada_web_jessicagaspar.jpg",
