@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { ArrowLeft, Download, Mail, MapPin, Briefcase, GraduationCap, Award, CheckCircle2, Eye, FileText, Printer } from 'lucide-react';
 import { Persona, Ciudad } from '../types';
 import { useTheme } from '../contexts/ThemeContext';
+import { personas as allPersonas, ciudades as allCiudades } from '../data';
 
 export default function Profile() {
   const { id } = useParams();
@@ -16,14 +17,13 @@ export default function Profile() {
   const vistas = useMemo(() => Math.floor(Math.random() * 500) + 50, []);
 
   useEffect(() => {
-    Promise.all([
-      fetch(`/api/personas/${id}`).then(res => res.ok ? res.json() : null),
-      fetch('/api/ciudades').then(res => res.json())
-    ]).then(([p, c]) => {
-      setPersona(p);
-      setCiudades(c);
+    // Simulate network parsing
+    setTimeout(() => {
+      const foundPersona = allPersonas.find(p => p.id === id);
+      setPersona(foundPersona || null);
+      setCiudades(allCiudades);
       setLoading(false);
-    });
+    }, 200);
   }, [id]);
 
   if (loading) {

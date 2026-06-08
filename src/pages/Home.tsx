@@ -4,6 +4,7 @@ import { Persona, Ciudad } from '../types';
 import PersonaCard from '../components/PersonaCard';
 import { useTheme } from '../contexts/ThemeContext';
 import { SearchX } from 'lucide-react';
+import { personas as allPersonas, ciudades as allCiudades } from '../data';
 
 export default function Home() {
   const { theme } = useTheme();
@@ -15,20 +16,38 @@ export default function Home() {
 
   useEffect(() => {
     // Fetch ciudades to map IDs to names in cards
-    fetch('/api/ciudades')
-      .then(res => res.json())
-      .then(setCiudades);
+    setCiudades(allCiudades);
   }, []);
 
   useEffect(() => {
     setLoading(true);
-    const query = searchParams.toString();
-    fetch(`/api/personas${query ? `?${query}` : ''}`)
-      .then(res => res.json())
-      .then(data => {
-        setPersonas(data);
-        setLoading(false);
-      });
+    
+    // Simulate network and filtering
+    setTimeout(() => {
+      const q = searchParams.get('q')?.toLowerCase();
+      const area = searchParams.get('area');
+      const ciudad = searchParams.get('ciudad');
+      const pais = searchParams.get('pais');
+
+      let result = [...allPersonas];
+
+      if (pais) result = result.filter(p => p.paisId === pais);
+      if (area) result = result.filter(p => p.areaId === area);
+      if (ciudad) result = result.filter(p => p.ciudadId === ciudad);
+      if (q) {
+        result = result.filter(p => 
+          p.nombre.toLowerCase().includes(q) ||
+          p.apellido.toLowerCase().includes(q) ||
+          p.profesion.toLowerCase().includes(q) ||
+          p.descripcion.toLowerCase().includes(q) ||
+          p.habilidades.some(h => h.toLowerCase().includes(q))
+        );
+      }
+
+      setPersonas(result);
+      setLoading(false);
+    }, 200);
+
   }, [searchParams]);
 
   const getCiudadNombre = (id: string) => {

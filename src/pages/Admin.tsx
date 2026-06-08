@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Persona } from '../types';
 import { useTheme } from '../contexts/ThemeContext';
 import { Plus, Edit2, Trash2, Power, Search, Upload } from 'lucide-react';
+import { personas as allPersonas } from '../data';
 
 export default function Admin() {
   const { theme } = useTheme();
@@ -9,9 +10,8 @@ export default function Admin() {
   const [q, setQ] = useState('');
 
   useEffect(() => {
-    fetch('/api/personas')
-      .then(res => res.json())
-      .then(setPersonas);
+    // Read from local data
+    setPersonas(allPersonas);
   }, []);
 
   const filtered = personas.filter(p => 

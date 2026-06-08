@@ -4,6 +4,7 @@ import { useSearchParams } from 'react-router-dom';
 import { useTheme } from '../contexts/ThemeContext';
 import { Pais, Categoria, Ciudad } from '../types';
 import Logo from './Logo';
+import { paises as allPaises, categorias as allCategorias, ciudades as allCiudades } from '../data';
 
 export default function Header() {
   const { theme, toggleTheme } = useTheme();
@@ -14,28 +15,23 @@ export default function Header() {
   const [ciudades, setCiudades] = useState<Ciudad[]>([]);
 
   useEffect(() => {
-    Promise.all([
-      fetch('/api/paises').then(res => res.json()),
-      fetch('/api/categorias').then(res => res.json()),
-      fetch('/api/ciudades').then(res => res.json()),
-    ]).then(([ps, cats, ciuds]) => {
-      setPaises(ps);
-      setCategorias(cats);
-      setCiudades(ciuds);
+    // Read from local data
+    setPaises(allPaises);
+    setCategorias(allCategorias);
+    setCiudades(allCiudades);
 
-      const urlParams = new URLSearchParams(window.location.search);
-      if (!urlParams.has('pais')) {
-        const bolivia = ps.find((x: Pais) => x.nombre.toLowerCase() === 'bolivia');
-        if (bolivia) {
-            setSearchParams(prev => {
-                if (!prev.has('pais')) {
-                prev.set('pais', bolivia.id);
-                }
-                return prev;
-            }, { replace: true });
-        }
+    const urlParams = new URLSearchParams(window.location.search);
+    if (!urlParams.has('pais')) {
+      const bolivia = [...allPaises].find((x: Pais) => x.nombre.toLowerCase() === 'bolivia');
+      if (bolivia) {
+        setSearchParams(prev => {
+          if (!prev.has('pais')) {
+            prev.set('pais', bolivia.id);
+          }
+          return prev;
+        }, { replace: true });
       }
-    });
+    }
   }, []);
 
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
