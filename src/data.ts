@@ -178,7 +178,7 @@ export const personas: Persona[] = [
       "Marketing",
       "Técnicas de venta"
     ],
-    "cv_pdf": "#",
+    "cv_pdf": "https://cv-jessica-gaspar.netlify.app/",
     "estado": "activo",
     "fecha_registro": new Date().toISOString()
   },
@@ -423,7 +423,7 @@ export const personas: Persona[] = [
       "Inglés",
       "Quechua"
     ],
-    "cv_pdf": "#",
+    "cv_pdf": "https://cv-jorge-ricardo-beltran-saenz.netlify.app/",
     "estado": "activo",
     "fecha_registro": "2026-05-20T03:46:59.137Z"
   },
@@ -808,7 +808,7 @@ export const personas: Persona[] = [
       "Dominio de la Ley General del Trabajo",
       "Resolución de conflictos y negociación"
     ],
-    "cv_pdf": "#",
+    "cv_pdf": "https://cv-jose-duran-subia.netlify.app/",
     "estado": "activo",
     "fecha_registro": "2026-05-20T03:46:59.137Z"
   },

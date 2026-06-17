@@ -63,10 +63,10 @@ export default function Header() {
       <div className="flex items-center gap-3 shrink-0">
         <Logo className="w-12 h-12" />
         <div>
-          <h1 className={`font-display text-[18px] font-extrabold tracking-tight ${theme === 'night' ? 'text-white' : 'text-slate-900'} flex items-center leading-none`}>
-            PORTAL <span className="mx-2"><span className="text-[#00FF00]">C</span><span className="text-[#F15A24]">V</span></span> DIGITAL
+          <h1 className="font-display text-[18px] font-extrabold tracking-tight text-[#00FF00] flex items-center leading-none">
+            PORTAL&nbsp;&nbsp;DIGITAL&nbsp;&nbsp;DE&nbsp;&nbsp;CV
           </h1>
-          <p className={`text-[12px] uppercase font-bold tracking-[0.15em] mt-1 ${theme === 'night' ? 'text-slate-400' : 'text-slate-500'}`}>
+          <p className="text-[12px] uppercase font-bold tracking-[0.15em] mt-1 text-[#F15A24]">
             Currictorio Profesional
           </p>
         </div>

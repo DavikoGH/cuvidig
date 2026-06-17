@@ -87,11 +87,24 @@ export default function Profile() {
               </div>
 
               <div className="flex gap-3 shrink-0">
-                <button className={`flex items-center gap-2 px-6 py-3 rounded-xl font-semibold border transition-colors ${
-                  theme === 'night' ? 'border-slate-700 bg-slate-800 hover:bg-slate-700 text-white' : 'border-slate-200 bg-slate-50 hover:bg-slate-100 text-slate-800'
-                }`}>
-                  <FileText size={18} /> CV en Digital
-                </button>
+                {persona.cv_pdf !== "#" ? (
+                  <a 
+                    href={persona.cv_pdf} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className={`flex items-center gap-2 px-6 py-3 rounded-xl font-semibold border transition-colors ${
+                      theme === 'night' ? 'border-slate-700 bg-slate-800 hover:bg-slate-700 text-white' : 'border-slate-200 bg-slate-50 hover:bg-slate-100 text-slate-800'
+                    }`}
+                  >
+                    <FileText size={18} /> CV en Digital
+                  </a>
+                ) : (
+                  <button className={`flex items-center gap-2 px-6 py-3 rounded-xl font-semibold border transition-colors ${
+                    theme === 'night' ? 'border-slate-700 bg-slate-800 hover:bg-slate-700 text-white' : 'border-slate-200 bg-slate-50 hover:bg-slate-100 text-slate-800'
+                  }`}>
+                    <FileText size={18} /> CV en Digital
+                  </button>
+                )}
                 <button className={`flex items-center gap-2 px-6 py-3 rounded-xl font-semibold border transition-colors ${
                   theme === 'night' ? 'border-slate-700 bg-slate-800 hover:bg-slate-700 text-white' : 'border-slate-200 bg-slate-50 hover:bg-slate-100 text-slate-800'
                 }`}>
