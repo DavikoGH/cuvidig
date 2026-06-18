@@ -51,6 +51,216 @@ export const roles: Rol[] = [
 
 export const personas: Persona[] = [
   {
+    "id": "gustavo-cansaya-valero-2",
+    "nombre": "Gustavo",
+    "apellido": "Cansaya Valero",
+    "foto": "/gustavocansayavalero_rostro.jpg",
+    "portada": "/gustavocansayavalero_portadita_web.jpg",
+    "profesion": "Agropecuario",
+    "paisId": "1",
+    "areaId": "10",
+    "ciudadId": "1",
+    "telefono": "+591 681",
+    "email": "gustavo@gmail.com",
+    "descripcion": "Técnico Superior en Agropecuaria con experiencia en gestión ambiental, producción sostenible y manejo de recursos naturales. Especializado en implementación de sistemas de riego eficientes, manejo de invernaderos, producción orgánica y uso de bioinsumos para la reducción de impacto ambiental. Experiencia en instalación de biodigestores, conservación de suelos, sanidad animal y desarrollo de huertas familiares. Con conocimientos en balances hídricos, optimización del uso del agua y prácticas agroecológicas. Profesional orientado a la sostenibilidad, protección del medio ambiente y desarrollo rural, con capacidad de trabajo en campo y ejecución de proyectos ambientales.",
+    "experiencia": [
+      {
+        "cargo": "TECNICO DE CAMPO",
+        "empresa": "Fundación NUNA Bolivia Conciencia",
+        "duracion": "03/06/2024 - 31/05/2025"
+      },
+      {
+        "cargo": "MANEJO DEL AGUA (Pasantía)",
+        "empresa": "Universidad Mayor de San Andrés UMSA - Instituto de Investigaciones Agropecuarias y Recursos Naturales - Estación Experimental Patacamaya - Escuela de Riego de Agronomía",
+        "duracion": "05/12/2022 - 03/02/2023"
+      },
+      {
+        "cargo": "PRODUCCION AGRICOLA ORGANICA (Pasantía)",
+        "empresa": "Universidad Mayor de San Andrés UMSA - Instituto de Investigaciones Agropecuarias y Recursos Naturales - Estación Experimental Patacamaya - Escuela de Riego de Agronomía",
+        "duracion": "05/12/2022 - 03/02/2023"
+      },
+      {
+        "cargo": "CRIANZA Y SANIDAD ANIMAL (Pasantía)",
+        "empresa": "Universidad Mayor de San Andrés UMSA - Instituto de Investigaciones Agropecuarias y Recursos Naturales - Estación Experimental Patacamaya - Escuela de Riego de Agronomía",
+        "duracion": "05/12/2022 - 03/02/2023"
+      },
+      {
+        "cargo": "PRODUCCION DE ALIMENTO BALANCEADO (Pasantía)",
+        "empresa": "Universidad Mayor de San Andrés UMSA - Instituto de Investigaciones Agropecuarias y Recursos Naturales - Estación Experimental Patacamaya - Escuela de Riego de Agronomía",
+        "duracion": "05/12/2022 - 03/02/2023"
+      }
+    ],
+    "formacion": [
+      {
+        "titulo": "TECNICO SUPERIOR EN AGROPECUARIA",
+        "institucion": "Instituto Tecnológico Idelfonso de las Muñecas de Titicachi",
+        "ano": "2024"
+      },
+      {
+        "titulo": "BACHILLER EN HUMANIDADES",
+        "institucion": "Colegio Llachisquia",
+        "ano": "2018"
+      }
+    ],
+    "cursos": [
+      "PRODUCCION DE DIESEL Y GASOLINA MEDIANTE PIROLISIS DE PLASTICOS - Colegio de Ingenieros Petroleros y Energías Cochabamba (CIPEC)",
+      "IMPLEMENTACION DE VIVEROS FORESTALES - Asociación CEJUPA Area Agropecuaria CEJUPA LEGRAIN",
+      "LOMBRICULTURA Y PRODUCCION DE HUMUS - Asociación CEJUPA Area Agropecuaria CEJUPA LEGRAIN",
+      "PREPARADOS NATURALES PARA EL CONTROL DE PLAGAS Y ENFERMEDADES - Asociación CEJUPA Area Agropecuaria CEJUPA LEGRAIN",
+      "ELABORACION DE SUPLEMENTOS NUTRICIONALES PARA GANADO DE LECHE Y CARNE - Agro Aulas Centro de Formación Agropecuaria",
+      "FLORICULTURA - Universidad Pública de El Alto Asociación Centro Juvenil para el Desarrollo Humano",
+      "PRODUCCIÓN PISCÍCOLA (TRUCHA, TILAPIA, PACU) - Punto de Educación Digital Green Academy",
+      "LESIONES Y TIPOS DE LESIONES LEY 348 - Sociedad de Altos Estudios Capacitación y Consultoría (SAEC)",
+      "ELITOS DE VIOLENCIA CONTRA LAS MUJERES LEY 348 - Sociedad de Altos Estudios Capacitación y Consultoría (SAEC)",
+      "ABORDAJE SOCIAL LEY 348 - Sociedad de Altos Estudios Capacitación y Consultoría (SAEC)",
+      "ABORDAJE LEGAL LEY 348 - Sociedad de Altos Estudios Capacitación y Consultoría (SAEC)",
+      "ABORDAJE PSICOLOGICO LEGAL LEY 348 - Sociedad de Altos Estudios Capacitación y Consultoría (SAEC)",
+      "PERSECUSIÓN Y SANCION PENAL LEY 348 - Sociedad de Altos Estudios Capacitación y Consultoría (SAEC)",
+      "PREVENCIÓN, ATENCIÓN, Y PROTECCIÓN LEY 348 - Sociedad de Altos Estudios Capacitación y Consultoría (SAEC)",
+      "DEFINICIONES DE TIPOS DE VIOLENCIA LEY 348 - Sociedad de Altos Estudios Capacitación y Consultoría (SAEC)",
+      "LEY 348 LEY INTEGRAL PARA GARANTIZAR A LAS MUJERES UNA VIDA LIBRE DE VIOLENCIA - Sociedad de Altos Estudios Capacitación y Consultoría (SAEC)",
+      "CENSO DE POBLACIÓN Y VIVIENDA 2024 - Instituto Nacional de Estadística INE",
+      "SALUD INTEGRAL Y PRODUCCIÓN APICOLA - Instituto Tecnológico Idelfonso de las Muñecas de Titicachi",
+      "LIDERAZGO, GESTION Y ELABORACIÓN DE PROYECTOS AGROPECUARIOS - Instituto Tecnológico Idelfonso de las Muñecas de Titicachi",
+      "DESARROLLO AGROPECUARIO - Instituto Tecnológico Idelfonso de las Muñecas de Titicachi",
+      "PRODUCCIÓN Y COMERCIALIZACION DE HORTALIZAS - Instituto Tecnológico Idelfonso de las Muñecas de Titicachi",
+      "MANEJO Y PRODUCCIÓN DE FRUTALES - Instituto Tecnológico Idelfonso de las Muñecas de Titicachi",
+      "PRODUCCIÓN Y MANEJO DE ANIMALES MENORES - Instituto Tecnológico Idelfonso de las Muñecas de Titicachi",
+      "BIOINSUMOS - Instituto Tecnológico Idelfonso de las Muñecas de Titicachi",
+      "SISTEMAS DE RIEGO - Instituto Tecnológico Idelfonso de las Muñecas de Titicachi"
+    ],
+    "habilidades": [
+      "Mantenimiento preventivo de aceite y filtros",
+      "Licencia de conducir categoría A en movilidades",
+      "Licencia de conducir categoría M en motocicleta",
+      "Microsoft Office Suite (Word, Excel, PowerPoint)",
+      "Administración y cálculo de dosis en sanidad animal",
+      "Poda e injerto de árboles frutales y ornamentales",
+      "Manejo de técnicas de Almacigo",
+      "Aplicación de abonos orgánicos, sistémicos"
+    ],
+    "cv_pdf": "#",
+    "estado": "activo",
+    "fecha_registro": new Date().toISOString()
+  },
+  {
+    "id": "graciela-orellana-soruco-1",
+    "nombre": "Graciela",
+    "apellido": "Orellana Soruco",
+    "foto": "/gracielaorellanasoruco_rostro.jpg",
+    "portada": "/gracielaorellanasoruco_portadita_web.jpg",
+    "profesion": "Auxiliar de Enfermería",
+    "paisId": "1",
+    "areaId": "1",
+    "ciudadId": "2",
+    "telefono": "+591 607",
+    "email": "graciela@gmail.com",
+    "descripcion": "Profesional Auxiliar de Enfermería con experiencia en atención hospitalaria, asistencia clínica y apoyo integral al paciente en instituciones públicas y privadas de salud. Cuento con trayectoria en el Hospital del Sud y clínicas particulares, desempeñándome en áreas de emergencia, terapia infusional, inmunización y bioseguridad. Poseo conocimientos actualizados en normativa sanitaria y administración pública, complementados con capacitaciones en manejo de software de salud, control epidemiológico y atención en situaciones de emergencia. Me caracterizo por mi vocación de servicio, responsabilidad, empatía y capacidad para trabajar bajo presión, brindando atención humanizada y eficiente orientada al bienestar y recuperación de los pacientes.",
+    "experiencia": [
+      {
+        "cargo": "Auxiliar de Enfermería",
+        "empresa": "HOSPITAL DEL SUD CONTRATO ALCALDÍA",
+        "duracion": "27 de noviembre 2024"
+      },
+      {
+        "cargo": "Auxiliar de Enfermería",
+        "empresa": "HOSPITAL DEL SUD CONTRATO ALCALDÍA",
+        "duracion": "07 de noviembre 2023"
+      },
+      {
+        "cargo": "Auxiliar de Enfermería",
+        "empresa": "HOSPITAL DEL SUD CONTRATO ALCALDÍA",
+        "duracion": "21 de julio 2023"
+      },
+      {
+        "cargo": "Auxiliar de Enfermería",
+        "empresa": "HOSPITAL DEL SUD CONTRATO ALCALDÍA",
+        "duracion": "10 de febrero 2022"
+      },
+      {
+        "cargo": "Auxiliar de Enfermería",
+        "empresa": "HOSPITAL DEL SUD CONTRATO AISEM",
+        "duracion": "2021"
+      },
+      {
+        "cargo": "Auxiliar de Enfermería",
+        "empresa": "HOSPITAL UNIVALLE",
+        "duracion": "2021"
+      },
+      {
+        "cargo": "Auxiliar de Enfermería",
+        "empresa": "Clínica Particular",
+        "duracion": "01 de agosto 2020 - 10 de agosto 2021"
+      },
+      {
+        "cargo": "Auxiliar de Enfermería",
+        "empresa": "CLINICA DR. LUIS MORALES ARNEZ",
+        "duracion": "15 de mayo 2019 - 15 de diciembre 2021"
+      },
+      {
+        "cargo": "Auxiliar de Enfermería",
+        "empresa": "CLINICA DR. LUIS MORALES ARNEZ",
+        "duracion": "15 de mayo 2019 - 02 de julio 2020"
+      }
+    ],
+    "formacion": [
+      {
+        "titulo": "Licenciatura en Enfermería (Egresada)",
+        "institucion": "Universidad José Ballivián - Beni",
+        "ano": "2025"
+      },
+      {
+        "titulo": "Auxiliar de Enfermería",
+        "institucion": "Ministerio de Salud y Deportes",
+        "ano": "2017"
+      },
+      {
+        "titulo": "Auxiliar de Enfermería",
+        "institucion": "Instituto Técnico Ignacia Zeballos",
+        "ano": "2016"
+      },
+      {
+        "titulo": "Bachiller en Humanidades",
+        "institucion": "Colegio República de Venezuela",
+        "ano": "-"
+      }
+    ],
+    "cursos": [
+      "LEY Nº 475 - Consultora Multidisciplinar DMM",
+      "LEY Nº 004-MARCELO QUIROGA SANTA CRUZ - Consultora Multidisciplinar DMM",
+      "LEY Nº 482 - Consultora Multidisciplinar DMM",
+      "Certificado de Antecedentes Penales - Organo Judicial",
+      "Certificado de No Violencia - Organo Judicial",
+      "DECRETO SUPREMO Nº 23318-A REGLAMENTO DE LA RESPONSABILIDAD POR LA FUNCION PUBLICA - Consultora Multidisciplinar DMM",
+      "LEY Nº 1178-SAFCO - Consultora Multidisciplinar DMM",
+      "SIAF - Consultora Multidisciplinar DMM",
+      "SICE - Consultora Multidisciplinar DMM",
+      "PAI – PROGRAMA AMPLIADO DE INMUNIZACION - Consultora Multidisciplinar DMM",
+      "DOMINANDO EL TRAUMA EN EMERGENCIAS - Sociedad de Emergensiología de Cochabamba",
+      "ENFERMEDADES ESTACIONALES Y ABORDAJE CLINICO DENGUE – INFLUENZA - Universidad Católica Boliviana",
+      "MANEJO Y ACTUALIZACION SOFTWARE DE SALUD (SALMI) - Universidad Católica Boliviana",
+      "TALLER DE FORTALECIMIETNO DEPARAMENTAL DE BIOSEGURIDAD Y GESTION DE RESIDUOS SOLIDOS - Universidad Adventista de Bolivia",
+      "CERTIFICADO DE RECONOCIMIENTO POR SU BRILLANTE TRABAJO DUARANTE LA EMERGENCIA SANITARIA COVID-19 - Hospital del Sud",
+      "TALLER DE CAPACITACION TERAPIA INFUSIONAL - Servicio Departamental de Salud",
+      "MEDICINA ALTERNATIVA Y COMPLEMENTARIA - Universidad Adventista de Bolivia",
+      "CURSO DEPARTAMENTAL LEY 1152 DEL SISTEMA UNICO DE SALUD - DISMED",
+      "CURSO BÁSICO DE QUECHUA - Grupo ÍCARO",
+      "CURSO BÁSICO DE QUECHUA - Centro de Capacitación Técnica \"ALIFE\""
+    ],
+    "habilidades": [
+      "Responsabilidad",
+      "Empatía",
+      "Trabajo bajo presión",
+      "Atención humanizada",
+      "Vocación de servicio",
+      "Castellano",
+      "Quechua"
+    ],
+    "cv_pdf": "#",
+    "estado": "activo",
+    "fecha_registro": "2026-06-17T19:50:12.000Z"
+  },
+  {
     "id": "carlos-boris-ger-saenz",
     "nombre": "Carlos Boris",
     "apellido": "Ger Saenz",
