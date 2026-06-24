@@ -858,7 +858,7 @@ export const personas: Persona[] = [
       "Atención en emergencias y UTI"
     ],
     "cv_pdf": "#",
-    "estado": "activo",
+    "estado": "inactivo",
     "fecha_registro": "2026-05-20T03:46:59.137Z"
   },
   {
@@ -1652,7 +1652,7 @@ export const personas: Persona[] = [
       "Quechua - Básico"
     ],
     "cv_pdf": "#",
-    "estado": "activo",
+    "estado": "inactivo",
     "fecha_registro": new Date().toISOString()
   },
   {
