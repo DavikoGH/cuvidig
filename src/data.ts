@@ -2496,7 +2496,7 @@ export const personas: Persona[] = [
       "Manejo de Power BI"
     ],
     "cv_pdf": "#",
-    "estado": "activo",
+    "estado": "inactivo",
     "fecha_registro": new Date().toISOString()
   },
   {
