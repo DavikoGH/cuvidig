@@ -142,7 +142,7 @@ export const personas: Persona[] = [
       "Supervisar y ajustar presupuestos",
       "Calcular y verificar la exactitud de los registros financieros internos"
     ],
-    "cv_pdf": "#",
+    "cv_pdf": "https://cv-vicky-rivera-calvimontes.netlify.app/",
     "estado": "activo",
     "fecha_registro": new Date().toISOString()
   },
@@ -1322,7 +1322,7 @@ export const personas: Persona[] = [
       "Trabajao en equipo"
     ],
     "cv_pdf": "#",
-    "estado": "activo",
+    "estado": "inactivo",
     "fecha_registro": "2026-05-20T03:46:59.137Z"
   },
   {
