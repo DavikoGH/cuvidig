@@ -51,6 +51,102 @@ export const roles: Rol[] = [
 
 export const personas: Persona[] = [
   {
+    "id": "vicky-rivera-calvimontes-0",
+    "nombre": "Vicky",
+    "apellido": "Rivera Calvimontes",
+    "foto": "/vickyriveracalvimontes_rostro.jpg",
+    "portada": "/vickyriveracalvimontes_portadita_web.jpg",
+    "profesion": "Contadora Pública",
+    "paisId": "1",
+    "areaId": "11",
+    "ciudadId": "7",
+    "telefono": "+591 793",
+    "email": "vicky@gmail.com",
+    "descripcion": "Licenciada en Contaduría Pública, con sólida formación académica y experiencia como Auxiliar Contable. Competente en análisis financiero, conciliaciones bancarias y preparación de informes contables. Hábil en el uso de software contable y en la aplicación de normativas fiscales. Comprometida con la precisión y la integridad en la gestión financiera.",
+    "experiencia": [
+      {
+        "cargo": "Auxiliar Contable - Auxiliar de Tesorería",
+        "empresa": "Cadena de Farmacias San Agustín",
+        "duracion": "Julio 2024 – 2026 (Actualmente)"
+      },
+      {
+        "cargo": "Pasantía",
+        "empresa": "Mancomunidad de Municipios Chuquisaca Centro MMCHC",
+        "duracion": "2022"
+      },
+      {
+        "cargo": "Auxiliar Contable",
+        "empresa": "Consultores & Auditores EDAX Ltda.",
+        "duracion": "Ene 2021 – Sep 2023"
+      },
+      {
+        "cargo": "Cajera",
+        "empresa": "Resto Bar del Río",
+        "duracion": "2022 – 2023"
+      },
+      {
+        "cargo": "Cajera",
+        "empresa": "Café Concert",
+        "duracion": "2021 – 2022"
+      }
+    ],
+    "formacion": [
+      {
+        "titulo": "Licenciatura en Contaduría Pública",
+        "institucion": "Universidad Mayor, Real y Pontificia de San Francisco Xavier de Chuquisaca",
+        "ano": "2023"
+      }
+    ],
+    "cursos": [
+      "Curso, Ley 1178 – Ley SAFCO (2024)",
+      "Curso, Decreto Supremo 23318-A – Reglamento de Responsabilidad por la Función Pública (2024)",
+      "Curso, Decreto Supremo 0181 SABS (2024)",
+      "Curso, Ley 341 de Políticas Públicas (2024)",
+      "Curso, Sistema de Administración de Bienes y Servicios – Ley SAFCO 1178 (2024)",
+      "Curso, Sistema de Tesorería y Crédito Público – Ley SAFCO 1178 (2024)",
+      "Curso, Sistema de Contabilidad Integrada – Ley SAFCO 1178 (2024)",
+      "Curso, Sistema de Control Gubernamental – Ley SAFCO 1178 (2024)",
+      "Curso, Órganos rectores y Responsabilidad Institucional – Ley SAFCO 1178 (2024)",
+      "Curso, Llenado de Formularios Impositivos – Asistente Tributario Contable (2024)",
+      "Curso, Elaboración de Planillas Laborales y Contables (2024)",
+      "Curso, Microsoft Excel (2024)",
+      "Curso, Microsoft Word (2024)",
+      "Curso, Neuromarketing 3.0 (2018)",
+      "Curso, Training en Neuro motivación (2018)",
+      "Curso, Marketing Digital (2018)",
+      "Curso, Acción Empresarial y Liderazgo Productivo (2018)",
+      "Curso, Metodología de la Investigación Científica (2018)",
+      "Curso, La Magia de la Atención y el Servicio al Cliente (2018)",
+      "Curso, Tecnología, Educación y Sociedad (2018)",
+      "Curso, Responsabilidad Social Empresarial (2018)",
+      "Jornadas Técnicas de Actualización Contable Tributaria (2015)"
+    ],
+    "habilidades": [
+      "Trabajo en equipo",
+      "Adaptación al cambio",
+      "Pensamiento crítico y analítico",
+      "Buena comunicación",
+      "Resolución de conflictos",
+      "Atención al detalle",
+      "Gestión del tiempo",
+      "Resiliencia",
+      "Operador de computadoras",
+      "Manejo de Paquetes MS Office (Word, Excel, Power Point)",
+      "Sistema ContaGEN | Resto Tech",
+      "Manejo del Sistema TR4 y el Sistema Lolfar",
+      "Castellano (nativo)",
+      "Quechua (intermedio)",
+      "Evaluar e interpretar datos financieros",
+      "Documentar con precisión todas las operaciones financieras en los libros contables",
+      "Calcular y presentar declaraciones fiscales",
+      "Supervisar y ajustar presupuestos",
+      "Calcular y verificar la exactitud de los registros financieros internos"
+    ],
+    "cv_pdf": "#",
+    "estado": "activo",
+    "fecha_registro": new Date().toISOString()
+  },
+  {
     "id": "gustavo-cansaya-valero-2",
     "nombre": "Gustavo",
     "apellido": "Cansaya Valero",
@@ -2176,7 +2272,7 @@ export const personas: Persona[] = [
       "Español nativo"
     ],
     "cv_pdf": "#",
-    "estado": "activo",
+    "estado": "inactivo",
     "fecha_registro": new Date().toISOString()
   },
   {

@@ -29,7 +29,7 @@ export default function Home() {
       const ciudad = searchParams.get('ciudad');
       const pais = searchParams.get('pais');
 
-      let result = [...allPersonas];
+      let result = [...allPersonas].filter(p => p.estado === 'activo');
 
       if (pais) result = result.filter(p => p.paisId === pais);
       if (area) result = result.filter(p => p.areaId === area);
