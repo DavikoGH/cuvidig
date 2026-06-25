@@ -549,7 +549,7 @@ export const personas: Persona[] = [
       "Gestión de abastecimiento"
     ],
     "cv_pdf": "#",
-    "estado": "activo",
+    "estado": "inactivo",
     "fecha_registro": "2026-05-20T03:46:59.137Z"
   },
   {
@@ -2422,7 +2422,7 @@ export const personas: Persona[] = [
       "Gerencia de la construcción"
     ],
     "cv_pdf": "#",
-    "estado": "activo",
+    "estado": "inactivo",
     "fecha_registro": new Date().toISOString()
   },
   {
