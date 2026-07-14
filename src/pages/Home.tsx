@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { useSearchParams, useLocation } from 'react-router-dom';
 import { Persona, Ciudad } from '../types';
 import PersonaCard from '../components/PersonaCard';
 import { useTheme } from '../contexts/ThemeContext';
@@ -9,6 +9,7 @@ import { personas as allPersonas, ciudades as allCiudades } from '../data';
 export default function Home() {
   const { theme } = useTheme();
   const [searchParams] = useSearchParams();
+  const location = useLocation();
   const [personas, setPersonas] = useState<Persona[]>([]);
   const [ciudades, setCiudades] = useState<Ciudad[]>([]);
   const [loading, setLoading] = useState(true);
@@ -28,9 +29,14 @@ export default function Home() {
       const area = searchParams.get('area');
       const ciudad = searchParams.get('ciudad');
       const pais = searchParams.get('pais');
+      const isCvDigital = location.pathname === '/cv-digital';
 
       let result = [...allPersonas].filter(p => p.estado === 'activo');
 
+      if (isCvDigital) {
+        result = result.filter(p => p.cv_pdf && p.cv_pdf !== '#' && p.cv_pdf !== '');
+      }
+      
       if (pais) result = result.filter(p => p.paisId === pais);
       if (area) result = result.filter(p => p.areaId === area);
       if (ciudad) result = result.filter(p => p.ciudadId === ciudad);
@@ -48,7 +54,7 @@ export default function Home() {
       setLoading(false);
     }, 200);
 
-  }, [searchParams]);
+  }, [searchParams, location.pathname]);
 
   const getCiudadNombre = (id: string) => {
     return ciudades.find(c => c.id === id)?.nombre || 'Ciudad desconocida';

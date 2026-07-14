@@ -15,6 +15,7 @@ export default function App() {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
+        <Route path="cv-digital" element={<Home />} />
         <Route path="personas" element={<Home />} />
         <Route path="categorias" element={<Home />} />
         <Route path="ciudades" element={<Home />} />
