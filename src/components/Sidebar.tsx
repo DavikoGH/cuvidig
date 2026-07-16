@@ -10,7 +10,7 @@ export default function Sidebar() {
 
   const NAV_ITEMS = [
     { to: '/', label: 'Inicio', icon: <Home size={22} /> },
-    { to: '/cv-digital', label: 'CV en Digital', icon: <FileText size={22} /> },
+    { to: '/cv-digital', label: 'CV Digitales', icon: <FileText size={22} /> },
     /*
     { to: '/personas', label: 'Personas', icon: <Users size={22} /> },
     { to: '/categorias', label: 'Categorías', icon: <LayoutGrid size={22} /> },

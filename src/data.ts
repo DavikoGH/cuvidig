@@ -664,7 +664,7 @@ export const personas: Persona[] = [
       "Comunicación asertiva",
       "Resolución de problemas"
     ],
-    "cv_pdf": "#",
+    "cv_pdf": "https://cv-jhossel-patino.netlify.app/",
     "estado": "activo",
     "fecha_registro": "2026-05-20T03:46:59.137Z"
   },
@@ -793,7 +793,7 @@ export const personas: Persona[] = [
       "Microsoft Office",
       "Adobe Photoshop"
     ],
-    "cv_pdf": "#",
+    "cv_pdf": "https://cv-viviana-vaca-quiroz.netlify.app/",
     "estado": "activo",
     "fecha_registro": "2026-05-20T03:46:59.137Z"
   },
