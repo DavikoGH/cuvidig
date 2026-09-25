@@ -57,10 +57,13 @@ export default function Profile() {
       }`}>
         {/* Banner header */}
         <div 
-          className={`h-48 md:h-64 bg-cover bg-center relative ${!persona.portada ? 'bg-gradient-to-r from-blue-700 to-indigo-900' : 'bg-gradient-to-r from-slate-700 to-slate-900'}`}
-          style={{ backgroundImage: persona.portada ? `url('${persona.portada}')` : undefined }}
+          className={`h-56 md:h-72 bg-cover bg-[center_23%] relative ${!persona.portada ? 'bg-gradient-to-r from-blue-700 to-indigo-900' : 'bg-gradient-to-r from-slate-700 to-slate-900'}`}
+          style={{ 
+            backgroundImage: persona.portada ? `url('${persona.portada}')` : undefined,
+            backgroundPosition: 'center 23%'
+          }}
         >
-          <div className="absolute inset-0 bg-black/40" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/50" />
         </div>
 
         <div className="px-6 md:px-12 pb-12 relative">
@@ -131,7 +134,7 @@ export default function Profile() {
                   <Briefcase className="text-blue-500" /> Experiencia Profesional
                 </h2>
                 <div className="space-y-6">
-                  {persona.experiencia.slice(0, 2).map((exp, idx) => (
+                  {persona.experiencia.slice(0, 3).map((exp, idx) => (
                     <div key={idx} className="relative pl-6 border-l-2 border-slate-200 dark:border-slate-700 pb-2">
                       <div className="absolute w-3 h-3 bg-blue-500 rounded-full -left-[7.5px] top-1.5 ring-4 ring-white dark:ring-slate-900" />
                       <h3 className={`font-bold text-lg ${theme === 'night' ? 'text-white' : 'text-slate-900'}`}>{exp.cargo}</h3>
@@ -142,21 +145,23 @@ export default function Profile() {
                 </div>
               </section>
 
-              <section>
-                <h2 className={`font-display text-xl font-bold mb-6 flex items-center gap-2 ${theme === 'night' ? 'text-white' : 'text-slate-900'}`}>
-                  <GraduationCap className="text-blue-500" /> Formación Académica
-                </h2>
-                <div className="space-y-6">
-                  {persona.formacion.slice(0, 1).map((form, idx) => (
-                    <div key={idx} className="relative pl-6 border-l-2 border-slate-200 dark:border-slate-700 pb-2">
-                      <div className="absolute w-3 h-3 bg-slate-300 dark:bg-slate-600 rounded-full -left-[7.5px] top-1.5 ring-4 ring-white dark:ring-slate-900" />
-                      <h3 className={`font-bold text-lg ${theme === 'night' ? 'text-white' : 'text-slate-900'}`}>{form.titulo}</h3>
-                      <p className={`font-medium mt-1 ${theme === 'night' ? 'text-slate-300' : 'text-slate-700'}`}>{form.institucion}</p>
-                      <p className={`text-sm mt-1.5 ${theme === 'night' ? 'text-slate-400' : 'text-slate-500'}`}>{form.ano}</p>
-                    </div>
-                  ))}
-                </div>
-              </section>
+              {persona.formacion && persona.formacion.length > 0 && (
+                <section>
+                  <h2 className={`font-display text-xl font-bold mb-6 flex items-center gap-2 ${theme === 'night' ? 'text-white' : 'text-slate-900'}`}>
+                    <GraduationCap className="text-blue-500" /> Formación Académica
+                  </h2>
+                  <div className="space-y-6">
+                    {persona.formacion.map((form, idx) => (
+                      <div key={idx} className="relative pl-6 border-l-2 border-slate-200 dark:border-slate-700 pb-2">
+                        <div className="absolute w-3 h-3 bg-slate-300 dark:bg-slate-600 rounded-full -left-[7.5px] top-1.5 ring-4 ring-white dark:ring-slate-900" />
+                        <h3 className={`font-bold text-lg ${theme === 'night' ? 'text-white' : 'text-slate-900'}`}>{form.titulo}</h3>
+                        <p className={`font-medium mt-1 ${theme === 'night' ? 'text-slate-300' : 'text-slate-700'}`}>{form.institucion}</p>
+                        <p className={`text-sm mt-1.5 ${theme === 'night' ? 'text-slate-400' : 'text-slate-500'}`}>{form.ano}</p>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+              )}
             </div>
 
             {/* Sidebar Details */}

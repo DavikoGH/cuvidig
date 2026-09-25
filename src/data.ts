@@ -29,6 +29,7 @@ export const categorias: Categoria[] = [
   { id: "16", nombre: "Trabajo Social" },
   { id: "17", nombre: "Industrial" },
   { id: "18", nombre: "Comercial" },
+  { id: "19", nombre: "Modelos/Azafatas" },
 ];
 
 export const ciudades: Ciudad[] = [
@@ -50,6 +51,51 @@ export const roles: Rol[] = [
 ];
 
 export const personas: Persona[] = [
+  {
+    "id": "viviana-roca-pereira-0",
+    "nombre": "Viviana",
+    "apellido": "Roca Pereira",
+    "foto": "/vivianarocapereira_rostro.jpg",
+    "portada": "/portada_web_vivianarocapereira.jpg",
+    "profesion": "Modelo Independiente & Azafata Corporativa",
+    "paisId": "1",
+    "areaId": "19",
+    "ciudadId": "3",
+    "telefono": "+591 777 7777",
+    "email": "viviana.roca.p@gmail.com",
+    "descripcion": "Modelo y azafata profesional con destacada trayectoria en ferias de negocios internacionales, desfiles de moda de alta costura, campañas publicitarias BTL y eventos corporativos para marcas globales. Con sólida formación administrativa y de protocolo, destaco por mi empatía, excelente dicción, puntualidad rigurosa y gran capacidad para conectar con el público, proyectando sofisticación y prestigio para cada marca representada.",
+    "experiencia": [
+      {
+        "cargo": "Azafata Principal FEXPO",
+        "empresa": "Feria Exposición de Santa Cruz (Fexpocruz)",
+        "duracion": "2025"
+      },
+      {
+        "cargo": "Modelo Independiente de Imagen & BTL",
+        "empresa": "COCA COLA",
+        "duracion": "2024"
+      },
+      {
+        "cargo": "Modelo de Pasarela Principal & Catálogo",
+        "empresa": "PONTA GROSA",
+        "duracion": "2023"
+      }
+    ],
+    "formacion": [],
+    "cursos": [
+      "Protocolo, Etiqueta Social y Relaciones Públicas – Academia de Liderazgo & Protocolo Diplomático (2023)",
+      "Expresión Corporal, Fotopose y Pasarela Profesional – Studio Model Arts Bolivia (2022)",
+      "Oratoria, Modulación de Voz y Comunicación Asertiva – Instituto de Comunicación Integral (2021)"
+    ],
+    "habilidades": [
+      "Buen trato al cliente",
+      "Comunicación asertiva",
+      "Organización de clientes & protocolo"
+    ],
+    "cv_pdf": "https://cv-viviana-roca-pereira.netlify.app/",
+    "estado": "activo",
+    "fecha_registro": "2026-05-20T03:46:59.137Z"
+  },
   {
     "id": "vicky-rivera-calvimontes-0",
     "nombre": "Vicky",
