@@ -105,48 +105,6 @@ export default function PersonaCard({ persona, ciudadNombre, isExpanded, onToggl
                 <p className={`text-[13px] ${theme === 'night' ? 'text-slate-200' : 'text-slate-800'}`}>
                   <span className={`font-semibold ${theme === 'night' ? 'text-slate-400' : 'text-slate-500'}`}>Disponibilidad:</span> {['Sí', 'No', '1/2 tiempo'][persona.nombre.length % 3]}
                 </p>
-
-                {persona.experiencia && persona.experiencia.length > 0 && (
-                  <div className="mt-2 pt-2 border-t border-white/5">
-                    <p className={`text-[12px] font-semibold mb-1 ${theme === 'night' ? 'text-slate-300' : 'text-slate-700'}`}>Experiencia:</p>
-                    <ul className="space-y-1 text-[11px]">
-                      {persona.experiencia.slice(0, 3).map((exp, i) => (
-                        <li key={i} className="flex items-start gap-1.5">
-                          <span className="w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0 mt-1" />
-                          <span><strong>{exp.cargo}</strong> - {exp.empresa}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-
-                {persona.cursos && persona.cursos.length > 0 && (
-                  <div className="mt-2 pt-2 border-t border-white/5">
-                    <p className={`text-[12px] font-semibold mb-1 ${theme === 'night' ? 'text-slate-300' : 'text-slate-700'}`}>Cursos:</p>
-                    <ul className="space-y-1 text-[11px]">
-                      {persona.cursos.slice(0, 3).map((curso, i) => (
-                        <li key={i} className="flex items-start gap-1.5">
-                          <span className="w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0 mt-1" />
-                          <span className="line-clamp-1">{curso}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-
-                {persona.habilidades && persona.habilidades.length > 0 && (
-                  <div className="mt-2 pt-2 border-t border-white/5">
-                    <p className={`text-[12px] font-semibold mb-1 ${theme === 'night' ? 'text-slate-300' : 'text-slate-700'}`}>Habilidades:</p>
-                    <ul className="space-y-1 text-[11px]">
-                      {persona.habilidades.slice(0, 3).map((hab, i) => (
-                        <li key={i} className="flex items-start gap-1.5">
-                          <span className="w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0 mt-1" />
-                          <span>{hab}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
               </div>
             </div>
           </motion.div>
