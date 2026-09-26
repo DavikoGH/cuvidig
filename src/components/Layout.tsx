@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import Sidebar from './Sidebar';
 import Header from './Header';
+import WhatsAppCTA from './WhatsAppCTA';
 import { useTheme } from '../contexts/ThemeContext';
 
 export default function Layout() {
@@ -35,6 +36,9 @@ export default function Layout() {
           </main>
         </div>
       </div>
+
+      {/* Floating WhatsApp Call To Action (Bottom Right) */}
+      <WhatsAppCTA />
     </div>
   );
 }

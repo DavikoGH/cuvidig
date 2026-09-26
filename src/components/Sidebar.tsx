@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { Home, Users, LayoutGrid, MapPin, Building2, Settings, LogOut, FileText } from 'lucide-react';
+import { Home, FileText, Facebook } from 'lucide-react';
 import { useTheme } from '../contexts/ThemeContext';
 import { clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
@@ -11,13 +11,6 @@ export default function Sidebar() {
   const NAV_ITEMS = [
     { to: '/', label: 'Inicio', icon: <Home size={22} /> },
     { to: '/cv-digital', label: 'CV Digitales', icon: <FileText size={22} /> },
-    /*
-    { to: '/personas', label: 'Personas', icon: <Users size={22} /> },
-    { to: '/categorias', label: 'Categorías', icon: <LayoutGrid size={22} /> },
-    { to: '/ciudades', label: 'Ciudades', icon: <MapPin size={22} /> },
-    { to: '/empresas', label: 'Empresas', icon: <Building2 size={22} /> },
-    { to: '/admin', label: 'Panel Admin', icon: <Settings size={22} /> },
-    */
   ];
 
   return (
@@ -46,12 +39,20 @@ export default function Sidebar() {
       </nav>
 
       <div className="mt-auto pt-6 px-4 w-full flex justify-center">
-        <button title="Cerrar sesión" className={`w-[70px] py-3 rounded-xl flex flex-col items-center justify-center transition-all duration-200 gap-1 ${
-          theme === 'night' ? 'text-slate-400 hover:bg-white/5 hover:text-white' : 'text-slate-500 hover:bg-slate-100 hover:text-slate-900'
-        }`}>
-          <LogOut size={22} />
-          <span className="text-[9px] font-medium text-center leading-tight px-1">Salir</span>
-        </button>
+        <a 
+          href="https://www.facebook.com/daviko.curriculum" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          title="Facebook - Daviko Curriculum" 
+          className={`w-[70px] py-3 rounded-xl flex flex-col items-center justify-center transition-all duration-200 gap-1 group ${
+            theme === 'night' 
+              ? 'text-slate-400 hover:bg-[#1877F2]/15 hover:text-[#1877F2]' 
+              : 'text-slate-500 hover:bg-[#1877F2]/10 hover:text-[#1877F2]'
+          }`}
+        >
+          <Facebook size={22} className="group-hover:scale-110 transition-transform text-[#1877F2]" />
+          <span className="text-[9px] font-medium text-center leading-tight px-1">Facebook</span>
+        </a>
       </div>
     </aside>
   );

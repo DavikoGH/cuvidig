@@ -18,13 +18,18 @@ export default function Profile() {
 
   useEffect(() => {
     // Simulate network parsing
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       const foundPersona = allPersonas.find(p => p.id === id);
       setPersona(foundPersona || null);
       setCiudades(allCiudades);
       setLoading(false);
     }, 200);
+    return () => clearTimeout(timer);
   }, [id]);
+
+  const handleBack = () => {
+    navigate(-1);
+  };
 
   if (loading) {
     return <div className="p-8 text-center text-slate-500">Cargando perfil...</div>;
@@ -44,7 +49,7 @@ export default function Profile() {
   return (
     <div className="max-w-5xl mx-auto pb-20">
       <button 
-        onClick={() => navigate(-1)}
+        onClick={handleBack}
         className={`flex items-center gap-2 mb-6 font-medium transition-colors ${
           theme === 'night' ? 'text-slate-400 hover:text-white' : 'text-slate-500 hover:text-slate-900'
         }`}

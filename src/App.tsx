@@ -9,20 +9,23 @@ import Layout from './components/Layout';
 import Home from './pages/Home';
 import Profile from './pages/Profile';
 import Admin from './pages/Admin';
+import ErrorBoundary from './components/ErrorBoundary';
 
 export default function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<Home />} />
-        <Route path="cv-digital" element={<Home />} />
-        <Route path="personas" element={<Home />} />
-        <Route path="categorias" element={<Home />} />
-        <Route path="ciudades" element={<Home />} />
-        <Route path="empresas" element={<Home />} />
-        <Route path="persona/:id" element={<Profile />} />
-        <Route path="admin" element={<Admin />} />
-      </Route>
-    </Routes>
+    <ErrorBoundary>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="cv-digital" element={<Home />} />
+          <Route path="personas" element={<Home />} />
+          <Route path="categorias" element={<Home />} />
+          <Route path="ciudades" element={<Home />} />
+          <Route path="empresas" element={<Home />} />
+          <Route path="persona/:id" element={<Profile />} />
+          <Route path="admin" element={<Admin />} />
+        </Route>
+      </Routes>
+    </ErrorBoundary>
   );
 }

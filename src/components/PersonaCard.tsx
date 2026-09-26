@@ -27,6 +27,10 @@ export default function PersonaCard({ persona, ciudadNombre, isExpanded, onToggl
     }
   };
 
+  const handleVerCV = () => {
+    navigate(`/persona/${persona.id}`);
+  };
+
   const vistas = useMemo(() => Math.floor(Math.random() * 500) + 50, []);
 
   return (
@@ -68,7 +72,7 @@ export default function PersonaCard({ persona, ciudadNombre, isExpanded, onToggl
         {/* Action Buttons */}
         <div className="flex gap-2 mt-auto items-center">
           <button 
-            onClick={() => navigate(`/persona/${persona.id}`)}
+            onClick={handleVerCV}
             className="flex-1 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-xs font-semibold text-center transition-colors"
           >
             Ver CV
