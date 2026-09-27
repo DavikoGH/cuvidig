@@ -26,3 +26,58 @@ body {
 html.dark ::-webkit-scrollbar-thumb {
   background-color: rgba(255, 255, 255, 0.1);
 }
+
+/* Mobile device detection for portrait and landscape */
+@media (max-width: 767px), (orientation: landscape) and (max-height: 550px) {
+  .is-mobile-device {
+    display: flex !important;
+  }
+  .is-desktop-device {
+    display: none !important;
+  }
+}
+
+@media (min-width: 768px) and (min-height: 551px) {
+  .is-mobile-device {
+    display: none !important;
+  }
+  .is-desktop-device {
+    display: flex !important;
+  }
+}
+
+/* Cards grid layout by device and orientation */
+
+/* 1. Mobile Vertical (portrait phones): 2 columns */
+@media (max-width: 767px) and (orientation: portrait) {
+  .cv-cards-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+/* 2. Mobile Horizontal (landscape phones with height <= 550px): 3 columns */
+@media (orientation: landscape) and (max-height: 550px) {
+  .cv-cards-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+}
+
+/* 3. Tablet Vertical (portrait tablets 768px - 1024px): 3 columns */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .cv-cards-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+}
+
+/* 4. Tablet Horizontal (tablets in landscape: width 768px to 1366px, height > 550px): 4 columns */
+@media (min-width: 768px) and (max-width: 1366px) and (orientation: landscape) and (min-height: 551px) {
+  .cv-cards-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  }
+}
+@media (min-width: 900px) and (max-width: 1366px) and (orientation: landscape) {
+  .cv-cards-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  }
+}
+

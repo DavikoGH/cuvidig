@@ -40,7 +40,7 @@ export default function PersonaCard({ persona, ciudadNombre, isExpanded, onToggl
         : 'bg-white border-slate-200 shadow-sm'
     }`}>
       {/* Image Container */}
-      <div className="relative w-full h-[175px] bg-slate-700 overflow-hidden">
+      <div className="relative w-full h-[140px] sm:h-[175px] bg-slate-700 overflow-hidden">
         <img 
           src={persona.foto} 
           alt={persona.nombre}
@@ -54,33 +54,33 @@ export default function PersonaCard({ persona, ciudadNombre, isExpanded, onToggl
         {/* Expand Arrow inside Image */}
         <button 
           onClick={toggleExpanded}
-          className={`absolute top-4 right-4 w-8 h-8 rounded-full flex items-center justify-center transition-colors ${
+          className={`absolute top-2 right-2 sm:top-4 sm:right-4 w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center transition-colors ${
             theme === 'night' ? 'bg-black/50 hover:bg-black/70 text-white' : 'bg-white/50 hover:bg-white/80 text-slate-900 backdrop-blur-sm'
           }`}
         >
           <motion.div animate={{ rotate: expanded ? 180 : 0 }} transition={{ duration: 0.3 }}>
-            <ChevronDown size={16} />
+            <ChevronDown size={15} />
           </motion.div>
         </button>
       </div>
 
       {/* Content */}
-      <div className="px-4 pb-4 pt-1 relative z-10 flex flex-col flex-1">
-        <h3 className={`text-[18px] font-bold mb-1 line-clamp-1 ${theme === 'night' ? 'text-white' : 'text-slate-900'}`}>{persona.nombre} {persona.apellido}</h3>
-        <div className="text-[11px] text-blue-500 uppercase tracking-wider font-bold line-clamp-1 mb-2">{persona.profesion}</div>
+      <div className="px-2.5 pb-2.5 pt-1 sm:px-4 sm:pb-4 sm:pt-1 relative z-10 flex flex-col flex-1">
+        <h3 className={`text-[13px] sm:text-[18px] font-bold mb-0.5 sm:mb-1 line-clamp-1 ${theme === 'night' ? 'text-white' : 'text-slate-900'}`}>{persona.nombre} {persona.apellido}</h3>
+        <div className="text-[9.5px] sm:text-[11px] text-blue-500 uppercase tracking-wider font-bold line-clamp-1 mb-1.5 sm:mb-2">{persona.profesion}</div>
 
         {/* Action Buttons */}
-        <div className="flex gap-2 mt-auto items-center">
+        <div className="flex gap-1.5 sm:gap-2 mt-auto items-center">
           <button 
             onClick={handleVerCV}
-            className="flex-1 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-xs font-semibold text-center transition-colors"
+            className="flex-1 py-1.5 sm:py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-[11px] sm:text-xs font-semibold text-center transition-colors"
           >
             Ver CV
           </button>
-          <div className={`flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg text-xs font-semibold transition-colors ${
+          <div className={`flex items-center justify-center gap-1 sm:gap-1.5 px-1.5 sm:px-3 py-1.5 sm:py-2 rounded-lg text-[10px] sm:text-xs font-semibold transition-colors shrink-0 ${
             theme === 'night' ? 'bg-white/5 text-slate-300' : 'bg-slate-100 text-slate-600'
           }`} title="Vistas del perfil">
-            <Eye size={14} />
+            <Eye size={13} />
             <span>{vistas}</span>
           </div>
         </div>
@@ -96,17 +96,17 @@ export default function PersonaCard({ persona, ciudadNombre, isExpanded, onToggl
             transition={{ duration: 0.3, ease: 'easeInOut' }}
             className="overflow-hidden bg-black/10"
           >
-            <div className={`p-4 border-t text-sm ${
+            <div className={`p-2.5 sm:p-4 border-t text-xs sm:text-sm ${
               theme === 'night' ? 'border-white/5 text-slate-300' : 'border-slate-100 text-slate-600'
             }`}>
-              <div className="flex flex-col gap-2">
-                <p className={`text-[13px] ${theme === 'night' ? 'text-slate-200' : 'text-slate-800'}`}>
+              <div className="flex flex-col gap-1 sm:gap-2">
+                <p className={`text-[11px] sm:text-[13px] ${theme === 'night' ? 'text-slate-200' : 'text-slate-800'}`}>
                   <span className={`font-semibold ${theme === 'night' ? 'text-slate-400' : 'text-slate-500'}`}>Ciudad:</span> {ciudadNombre}
                 </p>
-                <p className={`text-[13px] ${theme === 'night' ? 'text-slate-200' : 'text-slate-800'}`}>
+                <p className={`text-[11px] sm:text-[13px] ${theme === 'night' ? 'text-slate-200' : 'text-slate-800'}`}>
                   <span className={`font-semibold ${theme === 'night' ? 'text-slate-400' : 'text-slate-500'}`}>Modalidad:</span> {['Fijo', 'Eventual', 'Freelancer'][persona.id.length % 3]}
                 </p>
-                <p className={`text-[13px] ${theme === 'night' ? 'text-slate-200' : 'text-slate-800'}`}>
+                <p className={`text-[11px] sm:text-[13px] ${theme === 'night' ? 'text-slate-200' : 'text-slate-800'}`}>
                   <span className={`font-semibold ${theme === 'night' ? 'text-slate-400' : 'text-slate-500'}`}>Disponibilidad:</span> {['Sí', 'No', '1/2 tiempo'][persona.nombre.length % 3]}
                 </p>
               </div>

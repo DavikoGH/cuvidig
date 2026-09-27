@@ -63,13 +63,13 @@ export default function Home() {
   return (
     <div className="w-full max-w-[1600px] mx-auto h-full flex flex-col">
       {loading ? (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-6">
+        <div className="cv-cards-grid grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-6 gap-2.5 sm:gap-4 md:gap-6">
           {[...Array(8)].map((_, i) => (
-            <div key={i} className={`rounded-xl h-[300px] animate-pulse ${theme === 'night' ? 'bg-[#1e293b]' : 'bg-slate-200'}`} />
+            <div key={i} className={`rounded-xl h-[230px] sm:h-[300px] animate-pulse ${theme === 'night' ? 'bg-[#1e293b]' : 'bg-slate-200'}`} />
           ))}
         </div>
       ) : personas.length > 0 ? (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-6 pb-20 items-start">
+        <div className="cv-cards-grid grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-6 gap-2.5 sm:gap-4 md:gap-6 pb-20 items-start">
           {personas.map(persona => (
             <PersonaCard 
               key={persona.id} 

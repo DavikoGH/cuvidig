@@ -24,14 +24,14 @@ export default function Layout() {
       </div>
 
       {/* Main Container */}
-      <div className="relative z-10 flex w-full h-screen p-4 md:p-6">
-        {/* Sidebar Menu */}
+      <div className="relative z-10 flex flex-col md:flex-row w-full min-h-screen md:h-screen p-3 sm:p-4 md:p-6 overflow-x-hidden">
+        {/* Sidebar Menu (Desktop only) */}
         <Sidebar />
 
         {/* Main Content Area */}
-        <div className="flex-1 flex flex-col h-full overflow-hidden relative ml-4 md:ml-6">
+        <div className="flex-1 flex flex-col md:h-full md:overflow-hidden relative ml-0 md:ml-6 w-full">
           <Header />
-          <main className="flex-1 overflow-y-auto pb-10 pr-2">
+          <main className="flex-1 md:overflow-y-auto pb-10 pr-0 md:pr-2">
             <Outlet />
           </main>
         </div>
