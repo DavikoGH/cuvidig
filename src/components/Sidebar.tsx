@@ -9,7 +9,7 @@ export default function Sidebar() {
   const { theme } = useTheme();
 
   const NAV_ITEMS = [
-    { to: '/', label: 'Inicio', icon: <Home size={22} /> },
+    { to: '/inicio', label: 'Inicio', icon: <Home size={22} /> },
     { to: '/cv-digital', label: 'CV Digitales', icon: <FileText size={22} /> },
   ];
 

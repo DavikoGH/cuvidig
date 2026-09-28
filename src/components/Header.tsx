@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Search, Moon, Sun, Home, FileText, Facebook, ChevronDown } from 'lucide-react';
-import { useSearchParams, NavLink } from 'react-router-dom';
+import { useSearchParams, NavLink, useLocation, useNavigate, Link } from 'react-router-dom';
 import { useTheme } from '../contexts/ThemeContext';
 import { Pais, Categoria, Ciudad } from '../types';
 import Logo from './Logo';
@@ -11,6 +11,8 @@ import { twMerge } from 'tailwind-merge';
 export default function Header() {
   const { theme, toggleTheme } = useTheme();
   const [searchParams, setSearchParams] = useSearchParams();
+  const location = useLocation();
+  const navigate = useNavigate();
   
   const [paises, setPaises] = useState<Pais[]>([]);
   const [categorias, setCategorias] = useState<Categoria[]>([]);
@@ -38,6 +40,13 @@ export default function Header() {
 
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     const q = e.target.value;
+    if (location.pathname !== '/cv-digital') {
+      const nextParams = new URLSearchParams(searchParams);
+      if (q) nextParams.set('q', q);
+      else nextParams.delete('q');
+      navigate(`/cv-digital?${nextParams.toString()}`);
+      return;
+    }
     setSearchParams(prev => {
       if (q) prev.set('q', q);
       else prev.delete('q');
@@ -46,6 +55,13 @@ export default function Header() {
   };
 
   const handleSelect = (key: string, value: string) => {
+    if (location.pathname !== '/cv-digital') {
+      const nextParams = new URLSearchParams(searchParams);
+      if (value) nextParams.set(key, value);
+      else nextParams.delete(key);
+      navigate(`/cv-digital?${nextParams.toString()}`);
+      return;
+    }
     setSearchParams(prev => {
       if (value) prev.set(key, value);
       else prev.delete(key);
@@ -74,8 +90,8 @@ export default function Header() {
         <div className="flex portrait:flex landscape:hidden flex-col items-center justify-center w-full gap-3">
           {/* 1. Logotipo CV PORTAL DIGITAL DE CV, CURRICTORIO PROFESIONAL arriba */}
           <div className="relative w-full flex items-center justify-center">
-            <div className="flex items-center justify-center gap-2.5">
-              <Logo className="w-10 h-10 shrink-0" />
+            <Link to="/inicio" className="flex items-center justify-center gap-2.5 group cursor-pointer" title="Ir al Inicio - Presentación">
+              <Logo className="w-10 h-10 shrink-0 group-hover:scale-105 transition-transform" />
               <div className="text-left">
                 <h1 className="font-display text-[16px] sm:text-[18px] font-extrabold tracking-tight text-[#00FF00] flex items-center leading-none">
                   PORTAL&nbsp;&nbsp;DIGITAL&nbsp;&nbsp;DE&nbsp;&nbsp;CV
@@ -84,7 +100,7 @@ export default function Header() {
                   Currictorio Profesional
                 </p>
               </div>
-            </div>
+            </Link>
 
             {/* Theme Toggle Button (Mobile Top Right) */}
             <button 
@@ -104,7 +120,7 @@ export default function Header() {
             {/* Menú a la izquierda: Inicio y CV Digitales */}
             <nav className="flex items-center gap-1.5">
               <NavLink
-                to="/"
+                to="/inicio"
                 className={({ isActive }) => twMerge(clsx(
                   "flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold transition-all shadow-sm",
                   isActive 
@@ -234,8 +250,8 @@ export default function Header() {
           {/* Fila 1: Logotipo a la izquierda + Menú a la derecha del logotipo */}
           <div className="flex items-center justify-between w-full">
             {/* Logotipo alineado a la izquierda */}
-            <div className="flex items-center gap-2.5 shrink-0">
-              <Logo className="w-9 h-9 shrink-0" />
+            <Link to="/inicio" className="flex items-center gap-2.5 shrink-0 group cursor-pointer" title="Ir al Inicio - Presentación">
+              <Logo className="w-9 h-9 shrink-0 group-hover:scale-105 transition-transform" />
               <div className="text-left">
                 <h1 className="font-display text-[15px] sm:text-[17px] font-extrabold tracking-tight text-[#00FF00] flex items-center leading-none">
                   PORTAL&nbsp;&nbsp;DIGITAL&nbsp;&nbsp;DE&nbsp;&nbsp;CV
@@ -244,13 +260,13 @@ export default function Header() {
                   Currictorio Profesional
                 </p>
               </div>
-            </div>
+            </Link>
 
             {/* Menú arriba alineado a la derecha del logotipo */}
             <div className="flex items-center gap-2 shrink-0">
               <nav className="flex items-center gap-1.5">
                 <NavLink
-                  to="/"
+                  to="/inicio"
                   className={({ isActive }) => twMerge(clsx(
                     "flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold transition-all shadow-sm",
                     isActive 
@@ -398,8 +414,8 @@ export default function Header() {
         {/* Fila 1: Logotipo a la izquierda + Logo Facebook y Cambio de Modo a la derecha */}
         <div className="flex items-center justify-between w-full">
           {/* Logotipo oficial alineado a la izquierda */}
-          <div className="flex items-center gap-2.5 shrink-0">
-            <Logo className="w-10 h-10 shrink-0" />
+          <Link to="/inicio" className="flex items-center gap-2.5 shrink-0 group cursor-pointer" title="Ir al Inicio - Presentación">
+            <Logo className="w-10 h-10 shrink-0 group-hover:scale-105 transition-transform" />
             <div className="text-left">
               <h1 className="font-display text-[16px] sm:text-[18px] font-extrabold tracking-tight text-[#00FF00] flex items-center leading-none">
                 PORTAL&nbsp;&nbsp;DIGITAL&nbsp;&nbsp;DE&nbsp;&nbsp;CV
@@ -408,7 +424,7 @@ export default function Header() {
                 Currictorio Profesional
               </p>
             </div>
-          </div>
+          </Link>
 
           {/* Acciones a la derecha: Solo logotipo de Facebook + Modo Día/Noche */}
           <div className="flex items-center gap-2.5 shrink-0">
@@ -525,8 +541,8 @@ export default function Header() {
           ======================================================== */}
       <div className="hidden xl:flex h-[80px] items-center justify-between w-full">
         {/* Branding */}
-        <div className="flex items-center gap-3 shrink-0">
-          <Logo className="w-12 h-12" />
+        <Link to="/inicio" className="flex items-center gap-3 shrink-0 group cursor-pointer" title="Ir al Inicio - Presentación">
+          <Logo className="w-12 h-12 group-hover:scale-105 transition-transform" />
           <div>
             <h1 className="font-display text-[18px] font-extrabold tracking-tight text-[#00FF00] flex items-center leading-none">
               PORTAL&nbsp;&nbsp;DIGITAL&nbsp;&nbsp;DE&nbsp;&nbsp;CV
@@ -535,7 +551,7 @@ export default function Header() {
               Currictorio Profesional
             </p>
           </div>
-        </div>
+        </Link>
 
         {/* Search Bar */}
         <div className="flex-1 max-w-[450px] mx-6 lg:mx-8 relative">

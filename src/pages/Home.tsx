@@ -29,13 +29,8 @@ export default function Home() {
       const area = searchParams.get('area');
       const ciudad = searchParams.get('ciudad');
       const pais = searchParams.get('pais');
-      const isCvDigital = location.pathname === '/cv-digital';
 
       let result = [...allPersonas].filter(p => p.estado === 'activo');
-
-      if (isCvDigital) {
-        result = result.filter(p => p.cv_pdf && p.cv_pdf !== '#' && p.cv_pdf !== '');
-      }
       
       if (pais) result = result.filter(p => p.paisId === pais);
       if (area) result = result.filter(p => p.areaId === area);
