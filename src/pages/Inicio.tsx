@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Sparkles, 
@@ -18,6 +18,56 @@ import {
 import { useTheme } from '../contexts/ThemeContext';
 import { personas, categorias } from '../data';
 
+function AscendingCounter({ target, duration = 1500, prefix = "+" }: { target: number; duration?: number; prefix?: string }) {
+  const [count, setCount] = useState(0);
+  const elementRef = useRef<HTMLSpanElement | null>(null);
+
+  useEffect(() => {
+    const element = elementRef.current;
+    if (!element) return;
+
+    let animationFrameId: number;
+
+    const startCounting = () => {
+      setCount(0);
+      let startTimestamp: number | null = null;
+      const step = (timestamp: number) => {
+        if (!startTimestamp) startTimestamp = timestamp;
+        const elapsed = timestamp - startTimestamp;
+        const progress = Math.min(elapsed / duration, 1);
+        // smooth cubic ease-out curve
+        const easeProgress = 1 - Math.pow(1 - progress, 3);
+        setCount(Math.round(easeProgress * target));
+
+        if (progress < 1) {
+          animationFrameId = requestAnimationFrame(step);
+        } else {
+          setCount(target);
+        }
+      };
+      animationFrameId = requestAnimationFrame(step);
+    };
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const [entry] = entries;
+        if (entry.isIntersecting) {
+          startCounting();
+        }
+      },
+      { threshold: 0.15 }
+    );
+
+    observer.observe(element);
+    return () => {
+      observer.disconnect();
+      cancelAnimationFrame(animationFrameId);
+    };
+  }, [target, duration]);
+
+  return <span ref={elementRef}>{prefix}{count}</span>;
+}
+
 export default function Inicio() {
   const { theme } = useTheme();
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -32,8 +82,8 @@ export default function Inicio() {
 
   const faqs = [
     {
-      q: "¿Qué es exactamente Cuvidig y en qué se diferencia de un CV en PDF?",
-      a: "Cuvidig es un Currictorio Profesional y Portal Digital donde tu hoja de vida se convierte en una página web viva e interactiva. A diferencia de un archivo PDF estático que se pierde o pesa demasiado, tu CV Digital tiene su propio enlace web único, botones de contacto directo a tu WhatsApp y llamada telefónica, galería multimedia, y está indexado para que empresas de tu ciudad o país te encuentren al instante."
+      q: "¿En qué se diferencia un CV Digital de un CV en PDF?",
+      a: "A diferencia de un archivo PDF estático que se pierde o pesa demasiado, tu CV Digital tiene su propio enlace web único, botones de contacto directo a tu WhatsApp y llamada telefónica, galería multimedia, y está indexado para que empresas de tu ciudad o país te encuentren al instante."
     },
     {
       q: "¿Cómo me contactan las empresas o clientes que ven mi perfil?",
@@ -41,15 +91,15 @@ export default function Inicio() {
     },
     {
       q: "¿Puedo compartir mi CV Digital en mis redes sociales o imprimirlo?",
-      a: "¡Totalmente! Tu perfil cuenta con un enlace web corto y personalizado (ej. cuvidig.com/persona/tu-nombre) ideal para colocar en tu biografía de Instagram, perfil de LinkedIn, enviarlo por chat o vincularlo a un código QR en tus tarjetas de presentación."
+      a: "¡Totalmente! Tu perfil cuenta con un enlace web corto y personalizado ideal para colocar en tu biografía de Instagram, perfil de LinkedIn, enviarlo por chat o vincularlo a un código QR."
     },
     {
       q: "¿Cómo puedo solicitar mi propio Currículum Digital en el portal?",
-      a: "Es muy fácil y rápido: solo debes hacer clic en el botón 'Solicitar mi CV Digital' y escribirnos por WhatsApp. Nuestro equipo se encarga del diseño, maquetación profesional y publicación de tu perfil para que quede impecable."
+      a: "Es muy fácil y rápido: solo debes hacer clic en el botón 'Solicitar mi CV Digital' y escribirnos por Whatsapp. Nuestro equipo se encargará de darte información de nuestros planes y realizar la maquetación y la publicación de tu perfil para que quede impecable."
     },
     {
       q: "¿Quiénes pueden publicar su perfil en Cuvidig?",
-      a: "Está abierto a todo profesional, técnico, estudiante, consultor, experto independiente, modelo, azafata o emprendedor que desee destacar en el mercado laboral y proyectar una imagen moderna e innovadora."
+      a: "Está abierto a todo profesional, técnico, estudiante, consultor, experto independiente, modelo, azafata o emprendedor que desee destacar en el mercado laboral y proyectar una imagen DIFERENTE e INNOVADORA."
     }
   ];
 
@@ -68,7 +118,7 @@ export default function Inicio() {
           {/* Badge superior */}
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900/90 dark:bg-white/10 border border-slate-700/50 dark:border-white/15 text-xs font-bold tracking-wide uppercase shadow-sm mb-6">
             <span className="flex h-2 w-2 rounded-full bg-[#00FF00] animate-ping" />
-            <span className="text-white font-bold">El Primer Currictorio Profesional</span>
+            <span className="text-white font-bold">EL PRIMER DIRECTORIO PROFESIONAL DE TALENTOS</span>
           </div>
 
           {/* Título Principal de la Presentación */}
@@ -81,7 +131,7 @@ export default function Inicio() {
 
           {/* Subtítulo con marcas de color corporativas */}
           <p className="mt-3 font-display font-bold text-lg sm:text-2xl text-[#F15A24] tracking-wide uppercase">
-            PORTAL DIGITAL DE CV &bull; CURRICTORIO PROFESIONAL
+            EXPERIENCIAS &bull; CURSOS &bull; PROYECTOS &bull; HABILIDADES
           </p>
 
           {/* Texto explicativo persuasivo */}
@@ -114,17 +164,17 @@ export default function Inicio() {
           </div>
 
           {/* Indicador de confianza rápido */}
-          <div className="mt-7 flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-xs text-slate-500 dark:text-slate-400">
-            <div className="flex items-center gap-1.5">
-              <CheckCircle2 size={15} className="text-[#00FF00]" />
+          <div className="mt-7 flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-sm text-slate-600 dark:text-slate-300 font-medium">
+            <div className="flex items-center gap-2">
+              <CheckCircle2 size={17} className="text-[#00FF00] shrink-0" />
               <span>Sin descargas obligatorias</span>
             </div>
-            <div className="flex items-center gap-1.5">
-              <CheckCircle2 size={15} className="text-[#00FF00]" />
+            <div className="flex items-center gap-2">
+              <CheckCircle2 size={17} className="text-[#00FF00] shrink-0" />
               <span>Visible en celulares y PC</span>
             </div>
-            <div className="flex items-center gap-1.5">
-              <CheckCircle2 size={15} className="text-[#00FF00]" />
+            <div className="flex items-center gap-2">
+              <CheckCircle2 size={17} className="text-[#00FF00] shrink-0" />
               <span>Contacto directo sin intermediarios</span>
             </div>
           </div>
@@ -139,7 +189,7 @@ export default function Inicio() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 text-center">
           <div className="p-4 rounded-2xl bg-white/60 dark:bg-slate-900/40 border border-slate-200 dark:border-white/5">
             <div className="text-2xl sm:text-3xl font-extrabold text-[#00FF00] drop-shadow-sm">
-              +{personas.length}
+              <AscendingCounter target={personas.length} />
             </div>
             <p className="text-xs sm:text-sm font-semibold text-slate-600 dark:text-slate-400 mt-1">
               Currículums Registrados
@@ -148,7 +198,7 @@ export default function Inicio() {
 
           <div className="p-4 rounded-2xl bg-white/60 dark:bg-slate-900/40 border border-slate-200 dark:border-white/5">
             <div className="text-2xl sm:text-3xl font-extrabold text-[#F15A24] drop-shadow-sm">
-              +{categorias.length}
+              <AscendingCounter target={categorias.length} />
             </div>
             <p className="text-xs sm:text-sm font-semibold text-slate-600 dark:text-slate-400 mt-1">
               Áreas Profesionales
@@ -181,8 +231,8 @@ export default function Inicio() {
       <section className="py-12 sm:py-16">
         <div className="text-center max-w-2xl mx-auto mb-10">
           <h2 className="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl">
-            ¿Por qué el CV en papel y PDF ya es{' '}
-            <span className="text-[#F15A24]">Cosa del Pasado</span>?
+            ¿Por qué el CV en papel ya están{' '}
+            <span className="block text-[#F15A24] mt-1">quedando atrás?</span>
           </h2>
           <p className="mt-3 text-sm sm:text-base text-slate-600 dark:text-slate-300">
             En un mercado laboral altamente competitivo, quien llega más rápido y con mayor impacto visual es quien consigue el trabajo.
@@ -237,7 +287,7 @@ export default function Inicio() {
             <ul className="space-y-3.5 text-xs sm:text-sm text-slate-700 dark:text-slate-200">
               <li className="flex items-start gap-2.5">
                 <CheckCircle2 size={16} className="text-[#00FF00] shrink-0 mt-0.5" />
-                <span><strong>Enlace Web Personal:</strong> Compártelo por WhatsApp, redes o código QR.</span>
+                <span><strong>Enlace Web Personal:</strong> Compartelo por Whatsapp y demás redes sociales.</span>
               </li>
               <li className="flex items-start gap-2.5">
                 <CheckCircle2 size={16} className="text-[#00FF00] shrink-0 mt-0.5" />
@@ -262,8 +312,8 @@ export default function Inicio() {
           ========================================================================= */}
       <section className="py-12 sm:py-16">
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-500/10 text-blue-500 font-bold text-xs uppercase tracking-wider mb-2">
-            <Zap size={14} />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 text-blue-500 font-bold text-sm uppercase tracking-wider mb-2">
+            <Zap size={16} />
             <span>Ventajas Exclusivas</span>
           </div>
           <h2 className="font-display font-extrabold text-2xl sm:text-4xl">
@@ -409,7 +459,7 @@ export default function Inicio() {
               Publica y Comparte
             </h3>
             <p className="mt-2 text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-              Recibes tu enlace personal y código QR para enviarlo a empresas, entrevistas y colocarlo en tus redes.
+              Recibes tu enlace personal para enviarlo a empresas, empresarios, banca, entrevistas y colocarlo en tus redes.
             </p>
           </div>
 
@@ -456,7 +506,7 @@ export default function Inicio() {
             <Link
               key={cat.id}
               to={`/cv-digital?area=${cat.id}`}
-              className="px-3.5 py-2 rounded-xl bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-white/10 hover:border-blue-500 dark:hover:border-blue-500 text-xs font-semibold text-slate-700 dark:text-slate-200 hover:text-blue-500 transition-all shadow-sm"
+              className="px-4 py-2.5 rounded-xl bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-white/10 hover:border-blue-500 dark:hover:border-blue-500 text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-blue-500 transition-all shadow-sm"
             >
               {cat.nombre}
             </Link>
@@ -525,7 +575,7 @@ export default function Inicio() {
             <span className="text-[#00FF00]">24 horas del día</span>?
           </h2>
 
-          <p className="mt-3 text-xs sm:text-sm sm:text-base text-slate-300 leading-relaxed">
+          <p className="mt-3 text-sm sm:text-lg text-slate-300 leading-relaxed">
             Obtén tu propio perfil profesional digital interactivo en Cuvidig y destaca frente a cualquier reclutador o cliente.
           </p>
 

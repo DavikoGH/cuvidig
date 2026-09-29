@@ -4,6 +4,7 @@ import { useSearchParams, NavLink, useLocation, useNavigate, Link } from 'react-
 import { useTheme } from '../contexts/ThemeContext';
 import { Pais, Categoria, Ciudad } from '../types';
 import Logo from './Logo';
+import ShareButton from './ShareButton';
 import { paises as allPaises, categorias as allCategorias, ciudades as allCiudades } from '../data';
 import { clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
@@ -146,21 +147,24 @@ export default function Header() {
               </NavLink>
             </nav>
 
-            {/* Red social de Facebook a la derecha */}
-            <a 
-              href="https://www.facebook.com/daviko.curriculum" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              title="Facebook - Daviko Curriculum" 
-              aria-label="Facebook"
-              className={`flex items-center justify-center w-8 h-8 rounded-xl transition-all shadow-sm shrink-0 ${
-                theme === 'night' 
-                  ? 'bg-slate-800/80 text-slate-300 hover:text-[#1877F2] border border-white/5' 
-                  : 'bg-white text-slate-700 hover:text-[#1877F2] border border-slate-200'
-              }`}
-            >
-              <Facebook size={18} className="text-[#1877F2]" />
-            </a>
+            {/* Red social de Facebook a la derecha y Compartir */}
+            <div className="flex items-center gap-1.5 shrink-0">
+              <ShareButton size="sm" />
+              <a 
+                href="https://www.facebook.com/daviko.curriculum" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                title="Facebook - Daviko Curriculum" 
+                aria-label="Facebook"
+                className={`flex items-center justify-center w-8 h-8 rounded-xl transition-all shadow-sm shrink-0 ${
+                  theme === 'night' 
+                    ? 'bg-slate-800/80 text-slate-300 hover:text-[#1877F2] border border-white/5' 
+                    : 'bg-white text-slate-700 hover:text-[#1877F2] border border-slate-200'
+                }`}
+              >
+                <Facebook size={18} className="text-[#1877F2]" />
+              </a>
+            </div>
           </div>
 
           {/* 3. Las 3 categorías (País, Departamento y Área) debajo del menú */}
@@ -291,6 +295,9 @@ export default function Header() {
                   <span>CV Digitales</span>
                 </NavLink>
               </nav>
+
+              {/* Botón Compartir */}
+              <ShareButton size="sm" />
 
               {/* Logotipo de Facebook */}
               <a 
@@ -426,8 +433,11 @@ export default function Header() {
             </div>
           </Link>
 
-          {/* Acciones a la derecha: Solo logotipo de Facebook + Modo Día/Noche */}
+          {/* Acciones a la derecha: Compartir + Solo logotipo de Facebook + Modo Día/Noche */}
           <div className="flex items-center gap-2.5 shrink-0">
+            {/* Botón de Compartir */}
+            <ShareButton size="md" />
+
             {/* Solo logotipo de Facebook (sin la palabra facebook) */}
             <a 
               href="https://www.facebook.com/daviko.curriculum" 
@@ -624,6 +634,9 @@ export default function Header() {
             </select>
             <ChevronDown size={14} className="absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400" />
           </div>
+
+          {/* Botón Compartir a la izquierda de Facebook */}
+          <ShareButton size="lg" />
 
           {/* Facebook logo (solo logotipo) */}
           <a 
